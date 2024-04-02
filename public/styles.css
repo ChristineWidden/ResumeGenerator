@@ -1,0 +1,100 @@
+body {
+    font-family: Arial, sans-serif;
+    background-color: blanchedalmond;
+}
+
+h1,
+h2 {
+    color: #333;
+}
+
+.options {
+    margin-bottom: 20px;
+}
+
+input[type="checkbox"] {
+    transform: scale(1.5);
+    margin-right: 10px;
+}
+
+div.section_div {
+    background-color: gray;
+    border-radius: 10px;
+    padding: 10px;
+    margin: 10px;
+}
+
+label {
+    font-weight: bold;
+}
+
+.container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.field {
+    width: 100%;
+    max-width: 400px;
+}
+
+button {
+    width: 100%;
+    max-width: 200px;
+}
+
+.checkbox-container {
+    display: flex;
+    align-items: center;
+    /* Align items vertically */
+}
+
+.content {
+    flex: 1;
+    /* Allow the content to flexibly adjust its size */
+    text-overflow: ellipsis;
+    /* Display ellipsis (...) for overflowed content */
+    vertical-align: top;
+    /* Align the div content with the top of the checkbox */
+    padding-bottom: 10px;
+    padding-left: 20px;
+
+    /* box-shadow: 0px 10px rgba(0, 0, 0, 0.2); */
+}
+
+div.string_item {
+    display: inline-block;
+}
+
+li {
+    margin-left: 10px;
+}
+
+.checklist_title {
+    font-size: larger;
+    font-weight: bold;
+    padding-bottom: 10px;
+}
+
+.dropdown_label {
+    font-size: larger;
+    font-weight: bold;
+    padding-right: 10px;
+}
+
+.checklist-container {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+    /* Adjust minmax values as needed */
+    gap: 10px;
+    /* Adjust gap between grid items */
+}
+
+.checkbox-container {
+    background-color: #ddd;
+    border-radius: 10px;
+    /* Add styling as needed */
+    padding: 20px;
+    /* Add padding as needed */
+}

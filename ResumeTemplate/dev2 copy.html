@@ -1,26 +1,30 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Resume_Template</title>
     <link rel="stylesheet" type="text/css" href="styles_prod.css">
 </head>
+
 <body class="prod">
     <div class="page">
         <div class="header">
+            {% block header %}
             <div class="name">{{name}}</div>
             <div class="item-title">{{job_title}}</div>
             <hr>
             <div class="contact-info">
                 {{email}} <strong>|</strong> {{website}} <strong>|</strong> {{location}}
             </div>
+            {% endblock %}
         </div>
 
 
 
-
         <div class="section">
+            {% block section0 %}
             <div class="section-title">Projects</div>
             <div class="subsection">
                 {% for project in projects %}
@@ -33,13 +37,14 @@
                     </ul>
                 </div>
                 {% endfor %}
+            </div>
+            {% endblock section0 %}
+
         </div>
 
 
-
-
-
         <div class="section">
+            {% block section1 %}
             <div class="section-title">Skills</div>
             <table class="grid-table">
                 <tr>
@@ -61,18 +66,19 @@
                 </tr>
                 {% endif %}
             </table>
+            {% endblock section1 %}
         </div>
 
 
 
-
-
         <div class="section">
+            {% block section2 %}
             <div class="section-title">Experience</div>
             {% for job in work_experience %}
             <div class="subsection">
                 <div class="item">
-                    <div class="item-title">{{job.title}}, {{job.company}}, {{job.start_date}} - {{job.end_date}}</div>
+                    <div class="item-title">{{job.title}}, {{job.company}}, {{job.start_date}} - {{job.end_date}}
+                    </div>
                     <ul>
                         {% for job_desc_item in job.description %}
                         <li>{{job_desc_item}}</li>
@@ -81,21 +87,14 @@
                 </div>
             </div>
             {% endfor %}
+            {% endblock section2 %}
         </div>
-    
-
-
-
-
-
-
-        
-
 
 
 
 
         <div class="section">
+            {% block section3 %}
             <div class="section-title">Education</div>
             {% for school in schools %}
             <div class="subsection">
@@ -115,22 +114,22 @@
                 </div>
             </div>
             {% endfor %}
+            {% endblock section3 %}
         </div>
-    
+
 
 
 
 
         <div class="section">
+            {% block section4 %}
             {% if extra_section_name %}
             <div class="section-title">{{extra_section_name}}</div>
             <div class="subsection">{{extra_section_contents}}</div>
             {% endif %}
+            {% endblock section4 %}
         </div>
 
-
-
-
-    </div>
 </body>
+
 </html>

@@ -1,0 +1,16 @@
+<svg version="1.2" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1000 1000" width="1000" height="1000">
+	<title>logo2-svg</title>
+	<defs>
+		<linearGradient id="g1" x2="1" gradientUnits="userSpaceOnUse" gradientTransform="matrix(887.774,0,0,600,49.5,219)">
+			<stop offset="0" stop-color="#f0d700"/>
+			<stop offset=".488" stop-color="#00749f"/>
+			<stop offset="1" stop-color="#f0d700"/>
+		</linearGradient>
+	</defs>
+	<style>
+		.s0 { fill: none;stroke: url(#g1);stroke-linecap: round;stroke-linejoin: round;stroke-width: 33 } 
+	</style>
+	<g id="Layer_4">
+		<path id="Layer" class="s0" d="m595.5 819c-373.5-87-550.5-324-546-526.5 0 0 113.7 55.5 238.5 52.5 126-3 145.5-127.5 349.5-126 204 1.5 313.1 180.8 298.5 316.5-15 139.5-129 250.5-268.5 244.5-134.9-5.8-222-103-222-249 0-126 115.5-199.5 223.5-201 109.5-1.5 184.5 93 184.5 184.5 0 85.5-84 147-175.5 147-114 0-172.5-76.5-144-178.5l226.5-33"/>
+	</g>
+</svg>

@@ -1,34 +1,25 @@
 const fs = require('fs');
 const express = require('express');
+const bodyParser = require('body-parser');
 const path = require('path');
 const { spawn } = require('child_process');
+
+const multer = require('multer');
+const upload = multer();
 
 const app = express();
 const port = 3000;
 
 app.use(express.static('public'));
-app.use(express.urlencoded({ extended: true }));
+// app.use(express.urlencoded({ extended: true }));
+app.use(bodyParser.urlencoded({ extended: false }));
+app.use(bodyParser.json());
 
-function readFileAsync(filePath) {
-    return new Promise((resolve, reject) => {
-        fs.readFile(filePath, 'utf8', (err, data) => {
-            if (err) {
-                console.error('Error reading JSON file:', err);
-                reject(err);
-            } else {
-                try {
-                    const jsonData = JSON.parse(data);
-                    resolve(jsonData);
-                } catch (error) {
-                    console.error('Error parsing JSON:', error);
-                    reject(error);
-                }
-            }
-        });
-    });
-}
-
-app.post('/generate-json', async (req, res) => {
+app.post('/generate-json', upload.none(), async (req, res) => {
+    // console.log("RES")
+    // console.log(res)
+    console.log("REQ")
+    console.log(req.body)
     // Read the JSON file
     let masterlistData = await readFileAsync("public/masterlist_data.json")
     // console.log(masterlistData)
@@ -54,7 +45,7 @@ app.post('/generate-json', async (req, res) => {
 
             // console.log(index)
 
-            if (name !== 'courses') {
+            if (name !== 'courses' && name !== 'section_order') {
                 if (!(resumeData.hasOwnProperty(name))) {
                     resumeData[name] = []
                 }
@@ -62,12 +53,14 @@ app.post('/generate-json', async (req, res) => {
                 // console.log("Name: " + name)
                 // console.log(masterlistData[name])
                 resumeData[name].push(masterlistData[name][index])
-            } else {
+            } else if (name === 'courses') {
                 school = splitString[1]
                 if (!schoolCourseDict.hasOwnProperty(school)) {
                     schoolCourseDict[school] = []
                 }
                 schoolCourseDict[school].push(parseInt(index))
+            } else if (name === 'section_order') {
+                resumeData[key] = JSON.parse(val)
             }
             // let lastIndex = key.lastIndexOf('_'); // Find the index of the last underscore
             // let name = key.substring(0, lastIndex); // Extract the substring before the last underscore
@@ -90,22 +83,24 @@ app.post('/generate-json', async (req, res) => {
     // }
 
     console.log(resumeData["schools"])
-
-    resumeData["schools"].forEach(school => {
-        console.log("SCHOOL!")
-        console.log(school)
-        console.log("_")
-        const schoolID = school.schoolID
-        
-        if(schoolCourseDict.hasOwnProperty(schoolID)) {
-            const indexesToKeep = schoolCourseDict[schoolID];
-            // Filter the courses array based on the indexes to keep
-            school.courses = school.courses.filter((course, index) => indexesToKeep.includes(index));
-        } else {
-            school.courses = []
-            console.log(schoolID + school.courses)
-        }
-    });
+    
+    if (resumeData["schools"]) {
+        resumeData["schools"].forEach(school => {
+            console.log("SCHOOL!")
+            console.log(school)
+            console.log("_")
+            const schoolID = school.schoolID
+            
+            if(schoolCourseDict.hasOwnProperty(schoolID)) {
+                const indexesToKeep = schoolCourseDict[schoolID];
+                // Filter the courses array based on the indexes to keep
+                school.courses = school.courses.filter((course, index) => indexesToKeep.includes(index));
+            } else {
+                school.courses = []
+                console.log(schoolID + school.courses)
+            }
+        });
+    }
     
     // for (const school in resumeData["schools"]) {
     //     console.log("SCHOOL!")
@@ -136,7 +131,7 @@ app.post('/generate-json', async (req, res) => {
     }
 
     const jsonData = JSON.stringify(resumeData, null, 2);
-    // console.log(jsonData)
+    console.log(jsonData)
     fs.writeFileSync(outputFilePath, jsonData);
 
 
@@ -164,3 +159,23 @@ app.post('/generate-json', async (req, res) => {
 app.listen(port, () => {
     console.log(`Server is running on http://localhost:${port}`);
 });
+
+
+function readFileAsync(filePath) {
+    return new Promise((resolve, reject) => {
+        fs.readFile(filePath, 'utf8', (err, data) => {
+            if (err) {
+                console.error('Error reading JSON file:', err);
+                reject(err);
+            } else {
+                try {
+                    const jsonData = JSON.parse(data);
+                    resolve(jsonData);
+                } catch (error) {
+                    console.error('Error parsing JSON:', error);
+                    reject(error);
+                }
+            }
+        });
+    });
+}

@@ -69,5 +69,12 @@
         }
     ],
     "extra_section_name": "My Favorite Games",
-    "extra_section_contents": "Super Mario Galaxy, The Legend of Zelda: Ocarina of Time, Minecraft, Skyrim, Pokémon"
+    "extra_section_contents": "Super Mario Galaxy, The Legend of Zelda: Ocarina of Time, Minecraft, Skyrim, Pokémon",
+    "section_order": [
+        "projects",
+        "skills",
+        "experience",
+        "education",
+        "extra"
+    ]
 }

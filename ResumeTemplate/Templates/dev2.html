@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Resume_Template</title>
+    <link rel="stylesheet" type="text/css" href="styles_prod.css">
+</head>
+
+<body class="prod">
+    <div class="logo-left"><img class="logo" src="logo.svg"></img></div>
+    <div class="logo-right"><img class="logo" src="logo.svg"></img></div>
+    <div class="page">
+
+        <div class="header">
+            <div class="name">{{name}}</div>
+            <div class="item-title">{{job_title}}</div>
+            <hr>
+            <div class="contact-info">
+                {{email}} <strong>|</strong> <a href={{website}} target="_blank">{{website}}</a> <strong>|</strong>
+                {{location}}
+            </div>
+        </div>
+
+        <div class="section">
+            {% block section0 %}
+            {% endblock section0 %}
+        </div>
+
+        <div class="section">
+            {% block section1 %}
+            {% endblock section1 %}
+        </div>
+
+        <div class="section">
+            {% block section2 %}
+            {% endblock section2 %}
+        </div>
+
+        <div class="section">
+            {% block section3 %}
+            {% endblock section3 %}
+        </div>
+
+        <div class="section">
+            {% block section4 %}
+            {% endblock section4 %}
+        </div>
+
+    </div>
+</body>
+
+</html>

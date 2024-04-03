@@ -3,6 +3,7 @@
         "Christine Widden"
     ],
     "job_title": [
+        "PICK A JOB TITLE",
         "Game Designer Intern",
         "SDET",
         "Interactive Entertainment Instructional Student Assistant"
@@ -14,8 +15,8 @@
         "425-442-8220"
     ],
     "website": [
-        "linkedin.com/in/christinewidden",
         "https://linktr.ee/cwidden",
+        "linkedin.com/in/christinewidden",
         "https://github.com/ChristineWidden"
     ],
     "location": [
@@ -23,15 +24,21 @@
     ],
     "work_experience": [
         {
-            "title": "Software Developer in Test Intern",
+            "title": "Software Development Engineer in Test Intern",
             "company": "Symmetrix",
             "start_date": "June 2023",
             "end_date": "September 2023",
             "description": [
                 "Was responsible for developing the entire automated UI test suite for an application.",
                 "Taught myself to use the Playwright test automation library with TypeScript based on my experience with Selenium.",
-                "Utilized Git for version control and reviewed the pull requests of coworkers, updated codebase through CI/CD, and utilized Agile and Jira for task and project management."
+                "Utilized Git and GitHub Actions for version control and reviewed the pull requests of coworkers, updated codebase through CI/CD, and utilized Agile and Jira for task and project management."
             ]
+        },
+        {
+            "title": "Software Development Engineer in Test Intern",
+            "company": "Symmetrix",
+            "start_date": "June 2023",
+            "end_date": "September 2023"
         },
         {
             "title": "Interactive Entertainment Instructional Student Assistant",
@@ -45,6 +52,12 @@
             ]
         },
         {
+            "title": "Interactive Entertainment Instructional Student Assistant",
+            "company": "Cal Poly",
+            "start_date": "September 2023",
+            "end_date": "March 2024"
+        },
+        {
             "title": "Corporate Enterprise Architecture Intern",
             "company": "CompuCom",
             "start_date": "July 2022",
@@ -54,6 +67,12 @@
                 "Automated consolidation of data from different sources in Excel, utilizing macros and the VLOOKUP formula.",
                 "Facilitated communication between manager and team in the creation of SharePoint pages to organize department information and appointments on an internal company website."
             ]
+        },
+        {
+            "title": "Corporate Enterprise Architecture Intern",
+            "company": "CompuCom",
+            "start_date": "July 2022",
+            "end_date": "January 2023"
         }
     ],
     "skills": [
@@ -67,10 +86,12 @@
         "TypeScript",
         "Object-Oriented Programming",
         "Computer Security Basics",
+        "Postman",
         "Unity",
         "Linear Algebra",
         "OpenGL",
         "Git and GitHub",
+        "GitHub, GitHub Actions",
         "Linux, Windows, Mac",
         "Windows, Linux, Mac",
         "Linux",
@@ -94,17 +115,27 @@
         "JavaScript, HTML, CSS",
         "HTML/CSS",
         "React",
-        "Written Communication"
+        "Written Communication",
+        "Artificial Intelligence",
+        "Deep Learning"
     ],
     "schools": [
         {
+            "name": "California Polytechnic State University",
+            "schoolID": "calpolyMS",
+            "degree": "Master's in Computer Science",
+            "start_date": "September 2023",
+            "end_date": "December 2024",
+            "details": "Focusing my studies on artificial intelligence, machine learning, and game development."
+        },
+        {
+            "name": "California Polytechnic State University",
             "schoolID": "calpoly",
             "degree": "Bachelor’s in Computer Science",
-            "name": "California Polytechnic State University",
             "start_date": "September 2019",
-            "end_date": "June 2023, September 2023 - Present",
+            "end_date": "June 2023, ",
             "location": "San Luis Obispo",
-            "details": "GPA 3.66, Dean's List 9 times, now pursuing Master’s in Computer Science",
+            "details": "GPA 3.66, Dean's List 9 times",
             "courses": [
                 {
                     "name": "Computer Graphics",
@@ -124,7 +155,7 @@
                 },
                 {
                     "name": "Game Development",
-                    "description": "Developing a game in Unity with a team over the duration of the course."
+                    "description": "Developing a C#-based games in Unity, alongside an in-depth look into the principles behind good game design."
                 },
                 {
                     "name": "User-Centered Interface Design and Development",
@@ -137,6 +168,18 @@
                 {
                     "name": "Project-Based Object-Oriented Programming and Design",
                     "description": "Object-oriented programming in Java"
+                },
+                {
+                    "name": "Deep Learning",
+                    "description": "An exploration of how various deep learning systems work, such as natural language processing, generative models, and recurrent neural networks."
+                },
+                {
+                    "name": "Artificial Intelligence: Graduate Level",
+                    "description": "An in-depth look into high-level artificial intelligence concepts, with focus on team projects."
+                },
+                {
+                    "name": "Introduction to Computer Security",
+                    "description": "A hands-on course in computer system and network security. Utilized tools such as Postman to explore network security and learn how to protect against weaknesses."
                 }
             ]
         }
@@ -200,18 +243,28 @@
             ]
         },
         {
-            "name": "Operating Systems Assigned Projects",
+            "name": "Image2Recipe",
             "desc": [
-                "Created: simulated process scheduler, a Lightweight Process library (LWP or threads), Virtual Memory simulator, simulated Disk Scheduler, and a File System and Disk emulator.",
-                "Technologies: C++, GNU, File IO"
+                "Used a Convolutional Neural Network to identify common ingredients in photos of groceries set out, in order to suggest recipes to the user.",
+                "Primarily utilized tensorflow and numpy."
+            ]
+        },
+        {
+            "name": "Prisoner's Dilemma AI",
+            "desc": [
+                "Created an AI that learns to play Prisoner's Dilemma by facing off against the most popular algorithms.",
+                "Utilizes Recurrent Proximal Policy Optimization, Multilayer Perceptrons, and Long Short-Term Memory."
             ]
         }
     ],
     "extra_section_name": [
-        "My Favorite Games"
+        "My Favorite Games",
+        "My Hobbies",
+        "My Favorite Video Games",
+        "More About Me"
     ],
     "extra_section_contents": [
         "Dungeons and Dragons, Skyrim, The Legend of Zelda Series, Minecraft",
-        "test"
+        "In my free time, I enjoy playing Dungeons and Dragons with friends, writing, drawing, and making and playing video games!"
     ]
 }

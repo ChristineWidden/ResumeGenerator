@@ -1,11 +1,14 @@
 body {
     font-family: Arial, sans-serif;
-    background-color: blanchedalmond;
+    background-color: #2B8888;
+    font-size: 20px;
+    margin: 0px;
 }
 
 h1,
 h2 {
-    color: #333;
+    color: #FFF5D0;
+    margin-left: 60px;
 }
 
 .options {
@@ -13,15 +16,23 @@ h2 {
 }
 
 input[type="checkbox"] {
-    transform: scale(1.5);
-    margin-right: 10px;
+    transform: scale(2);
+    margin-right: 20px;
+}
+
+input[type="text"] {
+    margin-left: 20px;
+    padding: 5px;
+    font-size: 17px;
+    width: 300px;
 }
 
 div.section_div {
-    background-color: gray;
+    background-color: #C4E8E8;
     border-radius: 10px;
     padding: 10px;
-    margin: 10px;
+    margin: 30px 60px 30px 60px;
+    box-shadow: 15px 15px 10px #47275582;
 }
 
 label {
@@ -63,38 +74,148 @@ button {
     /* box-shadow: 0px 10px rgba(0, 0, 0, 0.2); */
 }
 
+.content>div:first-child label {
+    display: none;
+}
+
+.content>div:first-child div {
+    font-size: 25px;
+    font-weight: bold;
+}
+
 div.string_item {
     display: inline-block;
+    padding-bottom: 5px;
 }
 
 li {
     margin-left: 10px;
 }
 
-.checklist_title {
+.title {
     font-size: larger;
     font-weight: bold;
     padding-bottom: 10px;
+    padding-right: 10px;
+    color: #5F2E16;
 }
 
 .dropdown_label {
     font-size: larger;
     font-weight: bold;
     padding-right: 10px;
+    color: #5F2E16;
 }
+
+
+
+/* .dynamic-dropdown {
+    
+} */
+
+.custom-select {
+    display: inline-block;
+    position: relative;
+    width: 400px;
+    box-sizing: border-box;
+    /* Include padding and border in the size */
+}
+
+.custom-select select {
+    display: none;
+}
+
+.select-selected {
+    background-color: #D9BE5C;
+}
+
+/* Style the arrow inside the select element: */
+.select-selected:after {
+    position: absolute;
+    content: "";
+    top: 14px;
+    right: 10px;
+    width: 0;
+    height: 0;
+    border: 6px solid transparent;
+    border-color: #fff transparent transparent transparent;
+}
+
+/* Point the arrow upwards when the select box is open (active): */
+.select-selected.select-arrow-active:after {
+    border-color: transparent transparent #fff transparent;
+    top: 7px;
+}
+
+/* style the items (options), including the selected item: */
+.select-items div,
+.select-selected {
+    color: black;
+    padding: 8px 16px;
+    border: 1px solid transparent;
+    border-color: transparent transparent rgba(0, 0, 0, 0.1) transparent;
+    cursor: pointer;
+    font-weight: bold;
+    border-radius: 7px;
+}
+
+/* Style items (options): */
+.select-items {
+    position: absolute;
+    background-color: rgb(255, 255, 255);
+    top: 100%;
+    left: 0;
+    right: 0;
+    z-index: 99;
+}
+
+/* Hide the items when the select box is closed: */
+.select-hide {
+    display: none;
+}
+
+.select-items div:hover,
+.same-as-selected {
+    background-color: rgba(0, 0, 0, 0.1);
+}
+
 
 .checklist-container {
     display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+    grid-template-columns: repeat(auto-fit, minmax(400px, 1fr));
     /* Adjust minmax values as needed */
     gap: 10px;
     /* Adjust gap between grid items */
 }
 
 .checkbox-container {
-    background-color: #ddd;
+    background-color: #3C6666;
     border-radius: 10px;
     /* Add styling as needed */
     padding: 20px;
     /* Add padding as needed */
+    color: #FFF;
+}
+
+
+
+.sortable-list {
+    max-width: 300px;
+    margin: 0 auto;
+}
+
+#sortable {
+    list-style-type: none;
+    padding: 0;
+}
+
+li.draggable {
+    background-color: #3c6666;
+    padding: 10px;
+    margin: 5px;
+    cursor: grab;
+    width: 300px;
+    color: white;
+    font-weight: bold;
+    border-radius: 7px;
 }

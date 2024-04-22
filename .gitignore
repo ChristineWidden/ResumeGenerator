@@ -1,3 +1,6 @@
 ResumeGenStuff/
 node_modules/
 venv/
+public/masterlist_data.json
+output_resume.pdf
+output_last_page.pdf

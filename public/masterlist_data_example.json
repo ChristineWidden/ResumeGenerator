@@ -1,0 +1,140 @@
+{
+    "name": [
+        "RENAME THIS FILE TO masterlist_data.json AFTER EDITING AS NEEDED"
+    ],
+    "job_title": [
+        "PICK A JOB TITLE",
+        "Internship1",
+        "Job1",
+        "Job2"
+    ],
+    "email": [
+        "ExampleEmail@Outlook.com"
+    ],
+    "phone": [
+        "123-456-789"
+    ],
+    "website": [
+        "https://linktr.ee/EXAMPLE",
+        "https://linkedin.com/in/EXAMPLE",
+        "https://github.com/EXAMPLE"
+    ],
+    "location": [
+        "Somewhere, Somestate"
+    ],
+    "work_experience": [
+        {
+            "title": "Internship1",
+            "company": "SomeCompany",
+            "start_date": "SomeDate",
+            "end_date": "SomeDate",
+            "description": [
+                "Here_is_a_bullet_point",
+                "Here_is_another_one"
+            ]
+        },
+        {
+            "title": "Internship1_This_Time_Without_Details_For_Compactness",
+            "company": "SomeCompany",
+            "start_date": "SomeDate",
+            "end_date": "SomeDate"
+        }
+    ],
+    "skills": [
+        "Edit_these_skills_as_needed",
+        "C",
+        "C++",
+        "C and C++",
+        "C#, C++, Java, Python, JavaScript, Others",
+        "Various Programming Languages",
+        "Java",
+        "C#",
+        "Python",
+        "JavaScript",
+        "TypeScript",
+        "Object-Oriented Programming",
+        "Computer Security Basics",
+        "Postman",
+        "Unity",
+        "Linear Algebra",
+        "OpenGL",
+        "Git and GitHub",
+        "GitHub, GitHub Actions",
+        "Linux, Windows, Mac",
+        "Windows, Linux, Mac",
+        "Linux",
+        "Windows",
+        "Mac",
+        "Game Design",
+        "Game Development",
+        "Software Development",
+        "Software Development Life Cycle",
+        "SDLC",
+        "Automated Test Development",
+        "UI Testing",
+        "Software Testing",
+        "Playwright",
+        "Selenium",
+        "Unit Testing",
+        "CI/CD",
+        "Agile",
+        "Jira",
+        "Debugging",
+        "Software Debugging",
+        "JavaScript, HTML, CSS",
+        "HTML/CSS",
+        "React",
+        "Written Communication",
+        "Artificial Intelligence",
+        "Tensorflow",
+        "Machine Learning",
+        "Deep Learning",
+        "Data Mining"
+    ],
+    "schools": [
+        {
+            "name": "California Polytechnic State University",
+            "schoolID": "calpolyMS",
+            "degree": "Master's in Computer Science",
+            "start_date": "September 2023",
+            "end_date": "December 2024",
+            "details": "Talk_about_what_you_studied_if_you_want_or_awards_GPA_etc",
+            "courses": [
+                {
+                    "name": "Example_Course",
+                    "description": "Example_Description"
+                }
+            ]
+        },
+        {
+            "name": "California Polytechnic State University",
+            "schoolID": "calpoly",
+            "degree": "Bachelor’s in Computer Science",
+            "start_date": "September 2019",
+            "end_date": "June 2023",
+            "location": "San Luis Obispo",
+            "details": "Talk_about_what_you_studied_if_you_want_or_awards_GPA_etc",
+            "courses": [
+                {
+                    "name": "Example_Course",
+                    "description": "Example_Description"
+                }
+            ]
+        }
+    ],
+    "projects": [
+        {
+            "name": "Example_Project",
+            "desc": [
+                "bullet_point"
+            ]
+        }
+    ],
+    "extra_section_name": [
+        "If you want to have an extra section, name it here. Simply leave the option blank to leave it out",
+        "My_Hobbies"
+    ],
+    "extra_section_contents": [
+        "Extra_Section_Contents"
+    ]
+}

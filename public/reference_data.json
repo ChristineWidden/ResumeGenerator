@@ -1,75 +1,63 @@
 {
-    "name": "Christine Widden",
-    "job_title": "Example Job",
-    "email": "ChristineWidden@Outlook.com",
-    "phone": "425-442-8220",
-    "website": "linkedin.com/in/christinewidden",
-    "location": "Sammamish, WA",
+    "name": "x",
+    "job_title": "x",
+    "email": "x",
+    "phone": "x",
+    "website": "x",
+    "location": "x",
     "work_experience": [
         {
-            "title": "Software Engineer",
-            "company": "ABC Inc.",
-            "start_date": "January 2020",
-            "end_date": "January 2020",
+            "title": "x",
+            "company": "x",
+            "start_date": "x",
+            "end_date": "x",
             "description": [
-                "Was responsible for developing the entire automated UI test suite for an application."
+                "x"
             ]
         },
         {
-            "title": "Software Engineer2",
-            "company": "ABC Inc.",
-            "start_date": "January 2020",
-            "end_date": "January 2020",
+            "title": "x",
+            "company": "x",
+            "start_date": "x",
+            "end_date": "x",
             "description": [
-                "Developed web applications using Django and React."
+                "x"
             ]
         }
     ],
     "skills": [
-        "Python",
-        "JavaScript",
-        "HTML/CSS",
-        "Django",
-        "C++",
-        "React"
+        "x",
+        "x",
+        "x",
+        "x",
+        "x",
+        "x"
     ],
     "schools": [
         {
-            "degree": "Bachelor of Science in Computer Science",
-            "name": "Cal Poly",
-            "start_date": "2016",
-            "end_date": "2020",
-            "details": "details about this school",
+            "degree": "x",
+            "name": "x",
+            "start_date": "x",
+            "end_date": "x",
+            "details": "x",
             "courses": [
                 {
-                    "name": "Computer Graphics",
-                    "description": "OpenGl in C++, covering fundamentals of computer graphics, rendering, and GPU usage"
-                },
-                {
-                    "name": "Computer Animation",
-                    "description": "OpenGl in C++, covering fundamentals of computer graphics, rendering, and GPU usage"
+                    "name": "x",
+                    "description": "x"
                 }
             ]
         }
     ],
     "projects": [
         {
-            "name": "Goblin Chase",
+            "name": "x",
             "desc": [
-                "A Unity-based 2D platformer and shooter game, developed for the Interactive Entertainment Engineering course",
-                "A Unity-based 2D platformer and shooter game, developed for the Interactive Entertainment Engineering course"
-            ]
-        },
-        {
-            "name": "Goblin Chase2",
-            "desc": [
-                "A Unity-based 2D platformer and shooter game, developed for the Interactive Entertainment Engineering course",
-                "A Unity-based 2D platformer and shooter game, developed for the Interactive Entertainment Engineering course"
+                "x"
             ]
         }
     ],
-    "extra_section_name": "My Favorite Games",
-    "extra_section_contents": "Super Mario Galaxy, The Legend of Zelda: Ocarina of Time, Minecraft, Skyrim, Pokémon",
+    "extra_section_name": "x",
+    "extra_section_contents": "x",
     "section_order": [
         "projects",
         "skills",

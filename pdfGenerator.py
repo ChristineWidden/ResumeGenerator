@@ -6,25 +6,26 @@ import os
 
 
 
-with open('output/generated_resume_template.json', 'r') as f:
+with open('ResumeTemplate/generated_resume_template.json', 'r') as f:
     resume_data = json.load(f)
 block_order = resume_data["section_order"]
 print(block_order)
 
 
 
-# Load your personal information and resume template
+# Names of files to retrieve and generate
 template_directory = 'ResumeTemplate/Templates'
 template_file = 'dev2.html'
 child_template_file = 'child_template.html'
 child_template_file_final = 'final_child.html'
 
+# open the template file which contains the section contents
 with open(os.path.join(f'ResumeTemplate/{child_template_file}'), 'r') as file:
     child_template_content = file.read()
 
 for i, block in enumerate(block_order):
     child_template_content = child_template_content.replace(f'{block}_replace', f'section{i}')
-child_template_content = child_template_content.replace(f'replace_main.html', template_file)
+child_template_content = child_template_content.replace(f'REPLACE_EXTENDS', template_file)
 
 with open(template_directory + f"/{child_template_file_final}", 'w') as file:
     file.write(child_template_content)

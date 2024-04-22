@@ -2,30 +2,9 @@ body {
     font-family: 'Nexa Extra Light', Calibri, Arial, sans-serif;
     background-color: rgb(255, 255, 255);
     /* margin: 30px 35px 35px 35px; */
+    margin: 0;
     font-size: 13pt;
     font-weight: bold;
-}
-
-a {
-    color:black;
-}
-
-.logo {
-    width:100px;
-}
-
-.logo-left {
-    position: absolute;
-    top: -12px;
-    left: 42px;  
-}
-.logo-right {
-    position: absolute;
-    top: -12px;
-    right: 42px;  
-}
-.logo-left img {
-    transform: scaleX(-1);
 }
 
 .page {
@@ -38,10 +17,32 @@ a {
 }
 
 
+
 @font-face {
     font-family: 'Nexa Heavy';
     src: local('Nexa Heavy'); /* Use the local system's Calibri font */
     font-weight: bold; /* Specify the font weight */
+}
+
+a {
+    color:black;
+}
+
+.logo {
+    width:100px;
+}
+.logo-left {
+    position: absolute;
+    top: -12px;
+    left: 42px;  
+}
+.logo-right {
+    position: absolute;
+    top: -12px;
+    right: 42px;  
+}
+.logo-left img {
+    transform: scaleX(-1);
 }
 
 .header {

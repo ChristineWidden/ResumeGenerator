@@ -1,34 +1,62 @@
 body {
     font-family: 'Nexa Extra Light', Calibri, Arial, sans-serif;
-    /* line-height: 1.6; */
-    background-color: rgb(109, 109, 109);
-    /* background-color: white; */
-    margin: 40px 35px 35px 35px;
     font-size: 13pt;
     font-weight: bold;
-}
 
-a {
-    color:black;
-}
+    /* Remove for prod */
+    background-color: rgb(109, 109, 109);
+    margin: 40px 35px 35px 35px;
+    /* Remove for prod */
 
+    /* Add for prod */
+    /* background-color: white; */
+    /* margin: 0; */
+    /* Add for prod */
+}
 
 .page {
-    /* width: 612px;
-    height: 792px; */
+    /* Remove for prod */
     width: 990px;
     height: 1330px;
     padding: 35px 35px 35px 35px;
-    box-sizing: border-box; /* Include padding in width and height */
     background-color: rgb(255, 255, 255);
     margin:auto;
+    /* Remove for prod */
+
+    /* Add for prod */
+    /* padding: 0px 35px 35px 35px; */
+    /* Add for prod */
+    
+    box-sizing: border-box; /* Include padding in width and height */
 }
+
 
 
 @font-face {
     font-family: 'Nexa Heavy';
     src: local('Nexa Heavy'); /* Use the local system's Calibri font */
     font-weight: bold; /* Specify the font weight */
+}
+
+a {
+    color:black;
+}
+
+.logo {
+    width:100px;
+}
+.logo-left {
+    position: absolute;
+    top: -12px;
+    left: 42px;  
+}
+.logo-right {
+    position: absolute;
+    top: -12px;
+    right: 42px;  
+}
+.logo-left img {
+    transform: scaleX(-1);
 }
 
 .header {
@@ -99,8 +127,8 @@ strong {
     border-collapse: collapse; /* Collapse borders */
 
     color:rgb(0, 84, 103);
-    /* font-weight: bold;
-    font-family: 'Nexa Heavy', 'Calibri', 'Arial', 'sans-serif'; */
+    /* font-weight: bold; */
+    /* font-family: 'Nexa Heavy', 'Calibri', 'Arial', 'sans-serif'; */
 }
 
 .grid-table td {
@@ -112,4 +140,11 @@ strong {
 
 .grid-table td:last-child {
     border-right: none; /* Remove right border from last column */
+}
+
+.footnote {
+    position:absolute;
+    bottom:0;
+    color:rgba(0, 0, 0, 0.418);
+    font-size: 10px;
 }

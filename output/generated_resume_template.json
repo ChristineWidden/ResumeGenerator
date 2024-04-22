@@ -1,60 +1,24 @@
 {
-  "name": "Christine Widden",
-  "job_title": "Software Test Automation Engineer Intern",
-  "email": "ChristineWidden@Outlook.com",
-  "phone": "425-442-8220",
-  "website": "https://linktr.ee/cwidden",
-  "location": "Sammamish, Washington",
+  "name": "Example Name",
+  "job_title": "This Resume is for This Job",
+  "email": "Example@outlook.com",
+  "phone": "XXX-XXX-XXXX",
+  "website": "linkedin.com",
+  "location": "Somewhere",
   "work_experience": [
     {
       "title": "Interactive Entertainment Instructional Student Assistant",
       "company": "Cal Poly",
       "start_date": "September 2023",
-      "end_date": "March 2024",
-      "description": [
-        "Advised students on setting up development environments, managing work balance with a group, and developing and debugging their games made in Unity, Inform7, Godot, and Unreal Engine, and written in languages such as C#, C++, and Python.",
-        "Aided Dr. April Grow in grading student’s game analysis essays and other writeups.",
-        "Provided further game development advice and programming assistance outside of class hours."
-      ]
-    },
-    {
-      "title": "Software Development Engineer in Test Intern",
-      "company": "Symetrix",
-      "start_date": "June 2023",
-      "end_date": "September 2023",
-      "description": [
-        "Was responsible for developing the entire automated UI test suite for an application.",
-        "Taught myself to use the Playwright test automation library with TypeScript based on my experience with Selenium.",
-        "Utilized Git and GitHub Actions for version control and reviewed the pull requests of coworkers, updated codebase through CI/CD, and utilized Agile and Jira for task and project management."
-      ]
-    },
-    {
-      "title": "Corporate Enterprise Architecture Intern",
-      "company": "CompuCom",
-      "start_date": "July 2022",
-      "end_date": "January 2023"
+      "end_date": "March 2024"
     }
   ],
   "skills": [
-    "C#",
-    "Python",
-    "GitHub, GitHub Actions",
-    "Software Development",
-    "Automated Test Development",
-    "UI Testing",
-    "Unit Testing",
-    "Jira"
+    "C",
+    "C++",
+    "Python"
   ],
   "schools": [
-    {
-      "name": "California Polytechnic State University",
-      "schoolID": "calpolyMS",
-      "degree": "Master's in Computer Science",
-      "start_date": "September 2023",
-      "end_date": "December 2024",
-      "details": "GPA 3.70, Focusing my studies on artificial intelligence, machine learning, and game development.",
-      "courses": []
-    },
     {
       "name": "California Polytechnic State University",
       "schoolID": "calpoly",
@@ -68,36 +32,19 @@
   ],
   "projects": [
     {
-      "name": "Alien Invasion",
+      "name": "Computer Graphics Projects",
       "desc": [
-        "Worked with a team to develop a Unity-based tower defense game written in the language C#.",
-        "Utilized Object-Oriented Programming concepts to develop a modular and scalable upgrade system, allowing for complex game mechanics with fast development and minimal bugs.",
-        "Continuously playtested the game with new users to ensure proper balance and an enjoyable play experience by collecting feedback.",
-        "Regularly met with the team to ensure efficient and balanced work division."
-      ]
-    },
-    {
-      "name": "Curated Resume Generator",
-      "desc": [
-        "Wrote a web app that allows me to more efficiently create resumes for jobs, allowing the user to check off skills and experience from a masterlist in order to generate a PDF accordingly.",
-        "Technologies: Python, JavaScript, Node, CSS, HTML"
-      ]
-    },
-    {
-      "name": "Prisoner's Dilemma AI",
-      "desc": [
-        "Created an AI that learns to play Prisoner's Dilemma by facing off against the most popular algorithms. AI achieved performance equivalent to that of the best algorithmic agent.",
-        "Deep-learning driven AI utilizes Recurrent Proximal Policy Optimization, Multilayer Perceptrons, and Long Short-Term Memory. Python-based."
+        "Completed various OpenGL projects in C++ to learn and understand 3D graphics rendering and animating."
       ]
     }
   ],
-  "extra_section_name": "",
-  "extra_section_contents": "",
+  "extra_section_name": "More About Me",
+  "extra_section_contents": "Some more stuff",
   "section_order": [
-    "experience",
     "skills",
-    "education",
     "projects",
+    "experience",
+    "education",
     "extra"
   ]
 }

@@ -1,9 +1,11 @@
+// Handles making the custom fancy dropdowns for the form (but not the input part!)
+
 console.log("loading handle_dropdowns.js")
 
 function updateThing(dropdown) {
-    
+
     const customOptionInput = dropdown.parentNode.parentNode.parentNode.getElementsByTagName("input")[0]; // Assuming the input field follows the dropdown
-    
+
     if (dropdown.textContent === 'Other') {
         console.log('test')
         customOptionInput.style.display = 'inline-block';
@@ -15,33 +17,27 @@ function updateThing(dropdown) {
 function handleDropdowns() {
     console.log("Running handleDropdowns")
     // Dropdown extra option handling
-    const dropdowns = document.querySelectorAll('.select-selected');
-
-    dropdowns.forEach(function (dropdown) {
-        // const customOptionInput = dropdown.parentNode.getElementsByTagName("input")[0]; // Assuming the input field follows the dropdown
-
-        // dropdown.addEventListener('change', function () {
-        //     console.log('test')
-        //     if (dropdown.textContent === 'Other') {
-        //         customOptionInput.style.display = 'inline-block';
-        //     } else {
-        //         customOptionInput.style.display = 'none';
-        //     }
-        // });
-    })
-
+    console.log(document.getElementsByClassName("custom-select").length)
 
     var x, i, j, l, ll, selElmnt, a, b, c;
     /* Look for any elements with the class "custom-select": */
     x = document.getElementsByClassName("custom-select");
     l = x.length;
-    for (i = 0; i < l; i++) {
+    for (i = 0; i < l; i++) {   
         selElmnt = x[i].getElementsByTagName("select")[0];
         ll = selElmnt.length;
         /* For each element, create a new DIV that will act as the selected item: */
         a = document.createElement("DIV");
         a.setAttribute("class", "select-selected");
-        a.innerHTML = selElmnt.options[selElmnt.selectedIndex].innerHTML;
+        a.setAttribute("name", x[i].getAttribute("name"));
+
+
+        if (selElmnt.selectedIndex >= 0) {
+            a.innerHTML = selElmnt.options[selElmnt.selectedIndex].innerHTML;
+        } else {
+            a.innerHTML = ""; // or set a fallback like "Select an option"
+        }
+
         x[i].appendChild(a);
         /* For each element, create a new DIV that will contain the option list: */
         b = document.createElement("DIV");
@@ -85,8 +81,27 @@ function handleDropdowns() {
             closeAllSelect(this);
             this.nextSibling.classList.toggle("select-hide");
             this.classList.toggle("select-arrow-active");
+            var event = new Event('change');
+            a.dispatchEvent(event);
         });
+
+        console.log("Ran handle dropdowns")
     }
+
+    // After building custom dropdowns
+    const allCustomSelects = document.querySelectorAll(".custom-select");
+
+    allCustomSelects.forEach(customSelect => {
+        const selectElement = customSelect.querySelector("select");
+        const selectedDiv = customSelect.querySelector(".select-selected");
+        if (selectElement && selectedDiv) {
+            const selectedOption = selectElement.options[selectElement.selectedIndex];
+            selectedDiv.innerHTML = selectedOption.innerHTML;
+        }
+    });
+
+
+
 
     function closeAllSelect(elmnt) {
         /* A function that will close all select boxes in the document,
@@ -109,6 +124,7 @@ function handleDropdowns() {
             }
         }
     }
+
 
     /* If the user clicks anywhere outside the select box,
     then close all select boxes: */

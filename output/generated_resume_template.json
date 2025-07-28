@@ -1,24 +1,65 @@
 {
-  "name": "Example Name",
-  "job_title": "This Resume is for This Job",
-  "email": "Example@outlook.com",
-  "phone": "XXX-XXX-XXXX",
-  "website": "linkedin.com",
-  "location": "Somewhere",
+  "name": "Christine Widden",
+  "job_title": "Masters in CS Graduate",
+  "email": "ChristineWidden@Outlook.com",
+  "phone": "425-442-8220",
+  "website": "https://linktr.ee/cwidden",
+  "location": "Sammamish, Washington",
   "work_experience": [
+    {
+      "title": "Software Quality Assurance (QA) Engineer Intern",
+      "company": "Hypertherm",
+      "start_date": "June 2024",
+      "end_date": "September 2024",
+      "description": [
+        "Developed Python test scripts in TestComplete to automate UI localization testing, verifying multi-language functionality for client-facing applications.",
+        "Improved test coverage and streamlined bug reporting, reducing manual testing and contributing to efficient, high-quality software releases."
+      ]
+    },
     {
       "title": "Interactive Entertainment Instructional Student Assistant",
       "company": "Cal Poly",
       "start_date": "September 2023",
       "end_date": "March 2024"
+    },
+    {
+      "title": "Software Development Engineer in Test Intern",
+      "company": "Symetrix",
+      "start_date": "June 2023",
+      "end_date": "September 2023",
+      "description": [
+        "Was responsible for developing the entire automated UI test suite for an application.",
+        "Taught myself to use the Playwright test automation library with TypeScript based on my experience with Selenium.",
+        "Utilized Git and GitHub Actions for version control and reviewed the pull requests of coworkers, updated codebase through CI/CD, and utilized Agile and Jira for task and project management."
+      ]
+    },
+    {
+      "title": "Corporate Enterprise Architecture Intern",
+      "company": "CompuCom",
+      "start_date": "July 2022",
+      "end_date": "January 2023"
     }
   ],
   "skills": [
-    "C",
-    "C++",
-    "Python"
+    "MySQL",
+    "Git and GitHub",
+    "Unity",
+    "Software Development Life Cycle",
+    "Automated Test Development",
+    "QA Testing",
+    "Agile",
+    "Debugging"
   ],
   "schools": [
+    {
+      "name": "California Polytechnic State University",
+      "schoolID": "calpolyMS",
+      "degree": "Master's in Computer Science",
+      "start_date": "September 2023",
+      "end_date": "June 2025",
+      "details": "GPA 3.70, Focusing my studies on artificial intelligence, machine learning, and game development.",
+      "courses": []
+    },
     {
       "name": "California Polytechnic State University",
       "schoolID": "calpoly",
@@ -27,24 +68,43 @@
       "end_date": "June 2023",
       "location": "San Luis Obispo",
       "details": "GPA 3.66, Dean's List 9 times",
-      "courses": []
+      "courses": [
+        {
+          "name": "Software Development",
+          "description": "Software Development pipeline, version control with Git, and React. Worked on developing web apps with a team while following the software development lifecycle."
+        },
+        {
+          "name": "Intro to Database Systems",
+          "description": "Handling databases and queries with MySQL."
+        }
+      ]
     }
   ],
   "projects": [
     {
-      "name": "Computer Graphics Projects",
+      "name": "Alien Invasion",
       "desc": [
-        "Completed various OpenGL projects in C++ to learn and understand 3D graphics rendering and animating."
+        "Worked with a team to develop a Unity-based tower defense game written in the language C#.",
+        "Utilized Object-Oriented Programming concepts to develop a modular and scalable upgrade system, allowing for complex game mechanics with fast development and minimal bugs.",
+        "Continuously playtested the game with new users to ensure proper balance and an enjoyable play experience by collecting feedback.",
+        "Regularly met with the team to ensure efficient and balanced work division."
+      ]
+    },
+    {
+      "name": "Task Management IOS App",
+      "desc": [
+        "Developed an IOS app for managing daily tasks and helping the user prioritize for the best possible productivity.",
+        "Technologies: Swift"
       ]
     }
   ],
   "extra_section_name": "More About Me",
-  "extra_section_contents": "Some more stuff",
+  "extra_section_contents": "In my free time, I enjoy playing Dungeons and Dragons with friends, writing, drawing, and making and playing video games!",
   "section_order": [
-    "skills",
-    "projects",
     "experience",
+    "skills",
     "education",
+    "projects",
     "extra"
   ]
 }

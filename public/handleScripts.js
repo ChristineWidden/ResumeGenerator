@@ -5,6 +5,7 @@ async function main() {
         await populateForm();
         handleDropdowns();
         setUpDragDrop();
+        document.dispatchEvent(new Event('formReady')); 
         submitForm();
     } catch (error) {
         console.error('Error:', error);

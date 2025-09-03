@@ -12,10 +12,10 @@ export default function generateSection(key, checkValue, realValue) {
     if (key === 'section_order') {
         sectionDiv.setAttribute('section-type', 'reorder');
         makeReorderSection(sectionDiv, checkValue);
-    } else if (Array.isArray(checkValue)) {
+    } else if (Array.isArray(checkValue)) { // school or job or project
         sectionDiv.setAttribute('section-type', 'multi-value');
         makeChecklistSection(sectionDiv, key, realValue, 0);
-    } else {
+    } else { // single dropdown like name or job title
         sectionDiv.setAttribute('section-type', 'single-value');
         makeDropdownSection(sectionDiv, key, realValue);
     }

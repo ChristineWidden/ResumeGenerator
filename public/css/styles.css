@@ -85,18 +85,21 @@ button {
     display: none;
 }
 
-.content>div:first-child div {
+.content>div:first-child p {
     font-size: 25px;
     font-weight: bold;
 }
 
-div.string_item {
-    display: inline-block;
+.string_item {
+    display: inline;
     padding-bottom: 5px;
+    margin-bottom: 0px;
+    margin-top: 0px;
 }
 
 li {
     margin-left: 10px;
+    padding-bottom: 5px;
 }
 
 .title {

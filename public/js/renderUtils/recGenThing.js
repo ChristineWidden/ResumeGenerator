@@ -7,13 +7,14 @@ export function recGenThing(parent, thing, numRecs) {
     if (numRecs > 20) return;
 
     if (typeof thing === 'string') {
-        const div = document.createElement("div");
-        div.className = "string_item";
-        div.innerText = thing;
-        parent.appendChild(div);
+        const p = document.createElement("p");
+        p.className = "string_item";
+        p.innerText = thing;
+        parent.appendChild(p);
 
     } else if (Array.isArray(thing)) {
         const div = document.createElement("div");
+        div.className = "array_item";
         for (const item of thing) {
             const li = document.createElement("li");
             recGenThing(li, item, numRecs + 1);
@@ -26,7 +27,13 @@ export function recGenThing(parent, thing, numRecs) {
         div.className = "content";
 
         for (const key in thing) {
+            if (key === "keywords") {
+                continue;
+            }
+                
             const container = document.createElement("div");
+            container.className = "containerx";
+
             const label = document.createElement("label");
             label.textContent = `${key}: `;
             container.appendChild(label);

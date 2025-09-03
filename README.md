@@ -77,6 +77,8 @@ If a message pops up saying "JSON generated successfully and PDF generated", it 
 If that all worked, you are pretty much ready to go. Add as much information you want about jobs, skills, projects, etc. to the `masterlist_data.json` file. Messing up the formatting will break the program, so 
 I recommend using a website like https://jsonchecker.com/ to verify that the formatting is fine or validate it with a programming IDE.
 
+With how the template is set up, you can select up to 8 skills. The result looks best when skills are selected in pairs of 2.
+
 After finishing up the master list, refresh the webpage for the app (make sure to restart it with `node .\app.js` if it crashed at some point), fill out the form with what you want on the resume, and hit the generate button.
 
 Make sure that at least one item is checked for each checkbox section or you will get an error. Additionally, do not select a course for a school/education unless you also select that school/education. 

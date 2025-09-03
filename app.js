@@ -1,181 +1,143 @@
-const fs = require('fs');
+const fs = require('fs/promises')
 const express = require('express');
 const bodyParser = require('body-parser');
 const path = require('path');
 const { spawn } = require('child_process');
-
 const multer = require('multer');
 const upload = multer();
 
 const app = express();
-const port = 3000;
+const PORT = process.env.PORT || 3000;
 
+// File paths
+const MASTERLIST_PATH = path.join(__dirname, 'public', 'data/masterlist_data.json');
+const OUTPUT_DIR = path.join(__dirname, 'output');
+const OUTPUT_FILE = path.join(OUTPUT_DIR, 'generated_resume_template.json');
+
+// Middleware setup
 app.use(express.static('public'));
-// app.use(express.urlencoded({ extended: true }));
 app.use(bodyParser.urlencoded({ extended: false }));
 app.use(bodyParser.json());
 
+// Handle resume generation requests
 app.post('/generate-json', upload.none(), async (req, res) => {
-    // console.log("RES")
-    // console.log(res)
-    console.log("REQ")
-    console.log(req.body)
-    // Read the JSON file
-    let masterlistData = await readFileAsync("public/masterlist_data.json")
-    // console.log(masterlistData)
+    try {
+        console.log('\n=== Incoming Resume Generation Request ===');
 
-    // continue here.........
-    let resumeData = {}
+        // Read the JSON file
+        const masterlistData = JSON.parse(await fs.readFile(MASTERLIST_PATH, { encoding: 'utf8' }));
+        const resumeData = {}
+        const schoolCourseDict = {}
 
-    let schoolCourseDict = {}
+        // Parse form input into structured JSON
+        for (const key in req.body) {
+            const val = req.body[key]
 
-    for (const key in req.body) {
-        const val = req.body[key]
-
-        if (Array.isArray(val)) {
-            if (val[0] === "Other") {
-                resumeData[key] = val[1]
+            if (Array.isArray(val)) {
+                // Dropdown field with optional "Other" input
+                resumeData[key] = val[0] === "Other" ? val[1] : val[0]
+                console.log(`Field ${key}: ${resumeData[key]}`);
             } else {
-                resumeData[key] = val[0]
-            }
-        } else {
-            let splitString = key.split('.')
-            let name = splitString[0]
-            let index = splitString.slice(-1)[0]
+                // Other data comes as checkboxes
+                // in forms like skills.0 skills.1 etc.
+                // so here we get the category (name) and the index
+                const parts = key.split('.')
+                const category_name = parts[0]
+                const index = parseInt(parts[parts.length - 1])
 
-            // console.log(index)
+                // courses and section order are formatted differently
+                if (category_name !== 'courses' && category_name !== 'section_order') {
+                    // If this category doesn't exist yet, make it
+                    if (!(resumeData[category_name])) resumeData[category_name] = []
+                    // Retrieve the item with the same index from the masterlist and add it
+                    resumeData[category_name].push(masterlistData[category_name][index])
 
-            if (name !== 'courses' && name !== 'section_order') {
-                if (!(resumeData.hasOwnProperty(name))) {
-                    resumeData[name] = []
+                } else if (category_name === 'courses') {
+                    // courses has nested checkboxes so needs special treatment
+                    const degree = parts[1]
+                    // If this degree doesn't exist yet, put the school in the school dict
+                    if (!schoolCourseDict[degree]) schoolCourseDict[degree] = [];
+                    schoolCourseDict[degree].push(index)
+                } else if (category_name === 'section_order') {
+                    // section order isn't checkbox basd so needs special treatment
+                    // literally just the data as-is
+                    resumeData[key] = JSON.parse(val)
                 }
-                // console.log("Key: " + key)
-                // console.log("Name: " + name)
-                // console.log(masterlistData[name])
-                resumeData[name].push(masterlistData[name][index])
-            } else if (name === 'courses') {
-                school = splitString[1]
-                if (!schoolCourseDict.hasOwnProperty(school)) {
-                    schoolCourseDict[school] = []
-                }
-                schoolCourseDict[school].push(parseInt(index))
-            } else if (name === 'section_order') {
-                resumeData[key] = JSON.parse(val)
             }
-            // let lastIndex = key.lastIndexOf('_'); // Find the index of the last underscore
-            // let name = key.substring(0, lastIndex); // Extract the substring before the last underscore
-            // let index = parseInt(key.substring(lastIndex + 1))
         }
-    }
 
-    console.log("School Course Dict: ")
-    console.log(schoolCourseDict)
-    // for (const schoolID in schoolCourseDict) {
-    //     const indexesToKeep = schoolCourseDict[schoolID];
-    
-    //     // Find the school object with the corresponding SchoolID
-    //     const school = resumeData["schools"].find(school => school.schoolID === schoolID);
-        
-    //     if (school) {
-    //         // Filter the courses array based on the indexes to keep
-    //         school.courses = school.courses.filter((course, index) => indexesToKeep.includes(index));
-    //     }
-    // }
-
-    console.log(resumeData["schools"])
-    
-    if (resumeData["schools"]) {
-        resumeData["schools"].forEach(school => {
-            console.log("SCHOOL!")
-            console.log(school)
-            console.log("_")
-            const schoolID = school.schoolID
-            
-            if(schoolCourseDict.hasOwnProperty(schoolID)) {
+        // Filter courses based on schoolCourseDict
+        if (resumeData["schools"]) {
+            resumeData["schools"].forEach(school => {
+                const schoolID = school.schoolID
                 const indexesToKeep = schoolCourseDict[schoolID];
-                // Filter the courses array based on the indexes to keep
-                school.courses = school.courses.filter((course, index) => indexesToKeep.includes(index));
-            } else {
-                school.courses = []
-                console.log(schoolID + school.courses)
-            }
-        });
-    }
-    
-    // for (const school in resumeData["schools"]) {
-    //     console.log("SCHOOL!")
-    //     console.log(school)
-    //     console.log("_")
-    //     const schoolID = school.schoolID
-        
-    //     if(schoolCourseDict.hasOwnProperty(schoolID)) {
-    //         const indexesToKeep = schoolCourseDict[schoolID];
-    //         // Filter the courses array based on the indexes to keep
-    //         school.courses = school.courses.filter((course, index) => indexesToKeep.includes(index));
-    //     } else {
-    //         school.courses = []
-    //         console.log(schoolID + school.courses)
-    //     }
-    // }
 
-    // console.log('XXXXXXXXXXXXXXXXXXX')
-    // console.log(resumeData)
-    // console.log('XXXXXXXXXXXXXXXXXXX')
-
-    const outputDir = path.join(__dirname, 'output');
-    const outputFilePath = path.join(outputDir, 'generated_resume_template.json');
-
-    // Create the 'output' directory if it doesn't exist
-    if (!fs.existsSync(outputDir)) {
-        fs.mkdirSync(outputDir);
-    }
-
-    const jsonData = JSON.stringify(resumeData, null, 2);
-    console.log(jsonData)
-    fs.writeFileSync(outputFilePath, jsonData);
-
-
-    // Execute the Python script
-    const pythonProcess = spawn('python', ['pdfGenerator.py']);
-    
-    res_text = "JSON generated successfully and PDF generated"
-
-    pythonProcess.stdout.on('data', (data) => {
-        console.log(`stdout: ${data}`);
-    });
-
-    pythonProcess.stderr.on('data', (data) => {
-        console.error(`stderr: ${data}`);
-        res_text = `${data}`
-    });
-
-    pythonProcess.on('close', (code) => {
-        console.log(`child process exited with code ${code}`);
-        res.send(res_text);
-    });
-
-});
-
-app.listen(port, () => {
-    console.log(`Server is running on http://localhost:${port}`);
-});
-
-
-function readFileAsync(filePath) {
-    return new Promise((resolve, reject) => {
-        fs.readFile(filePath, 'utf8', (err, data) => {
-            if (err) {
-                console.error('Error reading JSON file:', err);
-                reject(err);
-            } else {
-                try {
-                    const jsonData = JSON.parse(data);
-                    resolve(jsonData);
-                } catch (error) {
-                    console.error('Error parsing JSON:', error);
-                    reject(error);
+                if (indexesToKeep) {
+                    const indexesToKeep = schoolCourseDict[schoolID]; // discard any schools that weren't checked
+                    // Filter the courses array based on the indexes to keep
+                    school.courses = school.courses.filter((_, i) => indexesToKeep.includes(i));
+                } else {
+                    school.courses = []
                 }
+            });
+        }
+
+        // Ensure output directory exists
+        if (!(await exists(OUTPUT_DIR))) {
+            await fs.mkdir(OUTPUT_DIR);
+            console.log(`Created output directory: ${OUTPUT_DIR}`);
+        }
+
+        // Write output JSON
+        await fs.writeFile(OUTPUT_FILE, JSON.stringify(resumeData, null, 2));
+        console.log(`Wrote resume JSON to ${OUTPUT_FILE}`);
+
+        // Run Python PDF generator
+        const pythonProcess = spawn('python', ['pdfGenerator.py']);
+        let output = '';
+        let errorOutput = '';
+
+        pythonProcess.stdout.on('data', (data) => {
+            output += data.toString();
+        });
+
+        pythonProcess.stderr.on('data', (data) => {
+            errorOutput += data.toString();
+        });
+
+        pythonProcess.on('close', (code) => {
+            if (code === 0) {
+                console.log('PDF generation succeeded.');
+                res.send("JSON generated successfully and PDF generated");
+            } else {
+                console.error(`Python script error: ${errorOutput}`);
+                res.status(500).send("An error occurred during PDF generation.");
             }
         });
-    });
+
+
+    } catch (err) {
+        console.error('Error handling /generate-json:', err);
+        res.status(500).send('Internal Server Error');
+    }
+
+});
+
+// Utility to check if a path exists
+async function exists(path) {
+    try {
+        await fs.access(path);
+        return true;
+    } catch {
+        return false;
+    }
 }
+
+// Start server
+app.listen(PORT, () => {
+    console.log(`Server is running on http://localhost:${PORT}`);
+});
+
+app.use((req, res) => {
+    res.status(404).send(`404 Not Found: ${req.originalUrl}`);
+});

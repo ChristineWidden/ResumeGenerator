@@ -20,7 +20,7 @@ document.addEventListener('DOMContentLoaded', function () {
         }
     }
 
-    ['input', 'change'].forEach(evt =>
+    ['input', 'change', 'updateSaveData'].forEach(evt =>
         form.addEventListener(evt, () => {
             const dataToSave = {};
             const processedNames = new Set();
@@ -53,28 +53,46 @@ document.addEventListener('DOMContentLoaded', function () {
             }
 
             localStorage.setItem('resumeFormData', JSON.stringify(dataToSave));
-            // console.log("Data changed")
+            console.log("Data changed")
         })
     );
 });
+
+
 
 document.addEventListener('formReady', () => {
     const form = document.getElementById('resumeForm');
     const savedData = JSON.parse(localStorage.getItem('resumeFormData') || '{}');
 
     for (const element of form.elements) {
-        if (element.id) {
-            console.log(element.id)
-        }
 
         if (!element.name) continue;
 
-        if (savedData.hasOwnProperty(element.name)) {
-            console.log(element.name + ' is a ' + element.type)
+        if (savedData[element.name]) {
             if (element.type === 'checkbox') {
                 element.checked = savedData[element.name];
             } else if (element.type === 'select-one') {
-                // element.value = savedData[element.name];
+                const savedValue = savedData[element.name];
+                const hasOption = Array.from(element.options).some(opt => opt.value === savedValue);
+                if (hasOption) {
+                    element.value = savedValue;
+                    // Trigger UI update if needed (e.g., custom dropdown repaint)
+                    element.dispatchEvent(new Event('change', { bubbles: true }));
+
+                    // Clear associated text input (Other field)
+                    const otherInput = form.querySelector(`input[type="text"][name="${element.name}"]`);
+                    if (otherInput) otherInput.value = "";
+                } else {
+                    // Set dropdown to 'Other' and text input to saved value
+                    element.value = "Other";
+                    element.dispatchEvent(new Event('change', { bubbles: true }));
+
+                    const otherInput = form.querySelector(`input[type="text"][name="${element.name}"]`);
+                    if (otherInput) {
+                        otherInput.value = savedValue;
+                        otherInput.dispatchEvent(new Event('input', { bubbles: true }));
+                    }
+                }
             } else if (element.type === 'text') {
                 element.value = savedData[element.name];
             } else if (element.type === 'hidden') {
@@ -83,8 +101,6 @@ document.addEventListener('formReady', () => {
                 console.log(element.name + ' is a ' + element.type)
             }
 
-            // Manually trigger input/change if needed (e.g., to show custom fields)
-            element.dispatchEvent(new Event('change', { bubbles: true }));
         }
     }
 

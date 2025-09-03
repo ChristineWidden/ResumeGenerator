@@ -7,6 +7,7 @@ body {
     margin: 0px;
 }
 
+
 h1,
 h2 {
     color: #FFF5D0;
@@ -53,8 +54,12 @@ label {
 }
 
 button {
-    width: 100%;
-    max-width: 200px;
+    background-color: #D9BE5C;
+    display: inline-block;
+    position: relative;
+    width: 400px;
+    box-sizing: border-box;
+    /* Include padding and border in the size */
 }
 
 .checkbox-container {

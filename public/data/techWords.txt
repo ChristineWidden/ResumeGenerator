@@ -1,0 +1,162 @@
+javascript
+typescript
+python
+java
+c++
+c#
+go
+lua
+rust
+ruby
+php
+swift
+kotlin
+react
+angular
+vue
+node.js
+express
+django
+flask
+spring
+laravel
+html
+css
+sass
+less
+sql
+mysql
+postgresql
+mongodb
+redis
+cassandra
+firebase
+oracle
+sqlite
+docker
+kubernetes
+aws
+azure
+gcp
+terraform
+ansible
+jenkins
+circleci
+ci/cd
+jest
+mocha
+chai
+enzyme
+selenium
+cypress
+unittest
+pytest
+rest
+graphql
+microservices
+api
+websocket
+oauth
+json
+xml
+git
+github
+gitlab
+bitbucket
+jira
+confluence
+vscode
+intellij
+agile
+scrum
+kanban
+tdd
+bdd
+devops
+multithreading
+concurrency
+scalability
+performance
+security
+encryption
+authentication
+perceptrons
+memory
+development
+bugs
+artificial intelligence
+machine learning
+deep learning
+neural networks
+nlp
+natural language processing
+reinforcement learning
+tensorflow
+pytorch
+scikit‑learn
+xgboost
+keras
+mlflow
+kubeflow
+aws
+azure
+google cloud
+gcp
+docker
+kubernetes
+ci/cd
+terraform
+ansible
+jenkins
+gitops
+serverless architecture
+cybersecurity
+penetration testing
+siem
+zero trust
+vpn
+network security
+ethical hacking
+devsecops
+vulnerability assessment
+python
+javascript
+java
+c#
+c++
+typescript
+react
+node.js
+django
+flask
+spring
+api design
+rest
+graphql
+object-oriented programming
+data structures
+algorithms
+debugging
+sql
+data science
+data analysis
+power bi
+tableau
+data visualization
+spark
+databricks
+r
+blockchain
+smart contracts
+web3
+solidity
+edge computing
+iot
+robotic process automation
+rpa
+agile
+scrum
+kanban
+problem solving
+adaptability
+communication

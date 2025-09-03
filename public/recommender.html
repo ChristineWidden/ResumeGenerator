@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8" />
+    <title>Job Description Recommender</title>
+    <link rel="stylesheet" href="styles.css" />
+    <style>
+        body {
+            padding: 2rem;
+            font-family: sans-serif;
+        }
+
+        textarea {
+            width: 100%;
+            height: 200px;
+            margin-bottom: 1rem;
+        }
+
+        .section {
+            margin-top: 2rem;
+        }
+
+        .match {
+            background-color: #e6ffed;
+            padding: 0.5rem;
+            border-left: 4px solid #2ecc71;
+            margin-bottom: 0.5rem;
+        }
+    </style>
+</head>
+
+<body>
+    <h1>Paste Job Description</h1>
+    <textarea id="job-desc" placeholder="Paste job description here..."></textarea>
+    <button id="analyze-btn">Get Recommendations</button>
+
+    <div class="section" id="recommendations"></div>
+
+    <script type="module" src="js/recommend.js"></script>
+</body>
+
+</html>

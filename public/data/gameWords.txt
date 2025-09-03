@@ -1,0 +1,75 @@
+ai
+AI developer
+AI programming
+animation
+animation
+ar
+AR
+artificial intelligence
+audio
+audio design
+augmented reality
+client
+collision
+console
+console games
+controller
+creative director
+cross-platform
+cryengine
+debugging
+directx
+environment artist
+feature complete
+fps
+game design document
+game engine
+game mechanics
+game systems
+gamemaker
+gameplay
+gameplay programmer
+GDD
+godot
+graphics programmer
+haptics
+input
+level design
+mmorpg
+mobile
+mobile games
+multiplayer
+multiplayer
+narrative design
+network programmer
+networking
+opengl
+optimization
+particle system
+pc
+performance
+physics
+producer
+QA
+rendering
+rigging
+rpg
+sandbox
+server
+shader
+shader
+sound design
+storyboarding
+technical artist
+technical director
+ui
+UI design
+UI/UX
+unity
+unreal
+ux
+virtual reality
+visual effects
+vr
+VR
+vulkan

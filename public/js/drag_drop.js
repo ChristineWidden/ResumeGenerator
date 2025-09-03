@@ -1,6 +1,6 @@
 console.log("loading drag_drop.js");
 
-function setUpDragDrop() {
+export default async function setUpDragDrop() {
     const sortableList =
         document.getElementById("sortable");
     let draggedItem = null;

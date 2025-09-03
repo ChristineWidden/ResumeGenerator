@@ -4,21 +4,19 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Resume Generator</title>
-    <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="css/styles.css">
 </head>
 <body>
     <h1>Resume Generator</h1>
+    <a href="/recommender.html" target="_blank">Open Recommendation System</a>
     <form id="resumeForm" action="/generate-json" method="POST">
     
     </form>
     
     <div id="messageContainer"></div>
 
-    <script src="populate.js"></script>
-    <script src="handle_dropdowns.js"></script>
-    <script src="drag_drop.js"></script>
-    <script src="form_submission.js"></script>
-    <script src="handleScripts.js"></script>
-    <script src="save_form_data.js"></script>
+    <!-- Load all logic from one central script -->
+    <script type="module" src="js/handleScripts.js"></script>
+    <script src="js/save_form_data.js"></script>
 </body>
 </html>

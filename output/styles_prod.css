@@ -1,9 +1,11 @@
+/* Used to set the styles of the output file */
+
 body {
     font-family: 'Nexa Extra Light', Calibri, Arial, sans-serif;
     background-color: rgb(255, 255, 255);
     /* margin: 30px 35px 35px 35px; */
     margin: 0;
-    font-size: 12pt;
+    font-size: 11pt;
     font-weight: bold;
 }
 
@@ -21,7 +23,7 @@ body {
 }
 
 .section {
-    margin-bottom: 18px;
+    margin-bottom: 30px;
 }
 
 .header {

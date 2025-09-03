@@ -1,4 +1,4 @@
-function submitForm() {
+export default async function submitForm() {
     // Handle form submission
     const form = document.getElementById('resumeForm');
     form.addEventListener('submit', function (event) {

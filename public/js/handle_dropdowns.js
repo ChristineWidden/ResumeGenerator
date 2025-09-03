@@ -2,19 +2,18 @@
 
 console.log("loading handle_dropdowns.js")
 
-function updateThing(dropdown) {
+function toggleOtherInput(dropdown) {
 
     const customOptionInput = dropdown.parentNode.parentNode.parentNode.getElementsByTagName("input")[0]; // Assuming the input field follows the dropdown
 
     if (dropdown.textContent === 'Other') {
-        console.log('test')
         customOptionInput.style.display = 'inline-block';
     } else {
         customOptionInput.style.display = 'none';
     }
 }
 
-function handleDropdowns() {
+export default async function handleDropdowns() {
     console.log("Running handleDropdowns")
     // Dropdown extra option handling
     console.log(document.getElementsByClassName("custom-select").length)
@@ -23,7 +22,7 @@ function handleDropdowns() {
     /* Look for any elements with the class "custom-select": */
     x = document.getElementsByClassName("custom-select");
     l = x.length;
-    for (i = 0; i < l; i++) {   
+    for (i = 0; i < l; i++) {
         selElmnt = x[i].getElementsByTagName("select")[0];
         ll = selElmnt.length;
         /* For each element, create a new DIV that will act as the selected item: */
@@ -47,29 +46,34 @@ function handleDropdowns() {
             create a new DIV that will act as an option item: */
             c = document.createElement("DIV");
             c.innerHTML = selElmnt.options[j].innerHTML;
-            c.addEventListener("click", function (e) {
-                /* When an item is clicked, update the original select box,
-                and the selected item: */
-                var y, i, k, s, h, sl, yl;
-                s = this.parentNode.parentNode.getElementsByTagName("select")[0];
-                sl = s.length;
-                h = this.parentNode.previousSibling;
-                for (i = 0; i < sl; i++) {
-                    if (s.options[i].innerHTML == this.innerHTML) {
-                        s.selectedIndex = i;
-                        h.innerHTML = this.innerHTML;
-                        y = this.parentNode.getElementsByClassName("same-as-selected");
-                        yl = y.length;
-                        for (k = 0; k < yl; k++) {
-                            y[k].removeAttribute("class");
-                        }
-                        this.setAttribute("class", "same-as-selected");
-                        break;
-                    }
-                }
-                h.click();
+            ["click"].forEach(function (evt) {
+                c.addEventListener(evt, function (e) {
 
-                updateThing(this)
+                    /* When an item is clicked, update the original select box,
+                    and the selected item: */
+                    var y, i, k, s, h, sl, yl;
+                    s = this.parentNode.parentNode.getElementsByTagName("select")[0];
+                    sl = s.length;
+                    h = this.parentNode.previousSibling;
+                    for (i = 0; i < sl; i++) {
+                        if (s.options[i].innerHTML == this.innerHTML) {
+                            s.selectedIndex = i;
+                            h.innerHTML = this.innerHTML;
+                            y = this.parentNode.getElementsByClassName("same-as-selected");
+                            yl = y.length;
+                            for (k = 0; k < yl; k++) {
+                                y[k].removeAttribute("class");
+                            }
+                            this.setAttribute("class", "same-as-selected");
+                            break;
+                        }
+                    }
+                    h.click();
+                    const form = document.getElementById('resumeForm');
+                    form.dispatchEvent(new Event('updateSaveData'));
+
+                    toggleOtherInput(this)
+                });
             });
             b.appendChild(c);
         }
@@ -85,7 +89,7 @@ function handleDropdowns() {
             a.dispatchEvent(event);
         });
 
-        console.log("Ran handle dropdowns")
+        
     }
 
     // After building custom dropdowns
@@ -125,8 +129,9 @@ function handleDropdowns() {
         }
     }
 
-
     /* If the user clicks anywhere outside the select box,
     then close all select boxes: */
     document.addEventListener("click", closeAllSelect);
+
+    console.log("Ran handle dropdowns")
 }

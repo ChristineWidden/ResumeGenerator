@@ -4,3 +4,6 @@ venv/
 public/masterlist_data.json
 output_resume.pdf
 output_last_page.pdf
+FinishedResumes/Hasbro_Software_Development_Engineer_Widden.pdf
+FinishedResumes/Symetrix_Full_Stack_2_Widden.pdf
+output/rendered_resume.html

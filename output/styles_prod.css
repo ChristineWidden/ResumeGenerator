@@ -5,25 +5,25 @@ body {
     background-color: rgb(255, 255, 255);
     /* margin: 30px 35px 35px 35px; */
     margin: 0;
-    font-size: 11pt;
+    font-size: 10.5pt;
     font-weight: bold;
 }
 
 .section-title {
-    font-size: 15pt;
+    font-size: 12pt;
     font-weight: bold;
     font-family: 'Nexa Heavy', 'Calibri', 'Arial', 'sans-serif';
     margin-bottom: 0px;
 }
 
 .name {
-    font-size: 20pt;
+    font-size: 18pt;
     font-weight: bold;
     font-family: 'Nexa Heavy', 'Calibri', 'Arial', 'sans-serif';
 }
 
 .section {
-    margin-bottom: 30px;
+    margin-bottom: 15px;
 }
 
 .header {
@@ -125,7 +125,7 @@ strong {
     border-right: 1px solid black; /* Thin lines between columns */
     padding: 0px 0px 0px 10px; /* Add some padding */
     text-align: left; /* Left-align text */
-    width: 50%; /* Set equal width for each cell */
+    width: 33%; /* Set equal width for each cell */
 }
 
 .grid-table td:last-child {

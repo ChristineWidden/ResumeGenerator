@@ -1,13 +1,15 @@
+<!-- Extends dev2.html to complete the template used to generate the resume -->
+
 {% extends "dev2.html" %}
 
-{% block section3 %}
+{% block section0 %}
 <div class="section-title">Education</div>
 {% for school in schools %}
 <div class="subsection">
     <div class="item">
         <div class="item-title">{{school.degree}}, {{school.name}}</div>
-        <div>{{school.start_date}} - {{school.end_date}}</div>
-        <div>{{school.details}}</div>
+        <div>{{school.start_date}} - {{school.end_date}} | {{school.details}}</div>
+        <!-- <div>{{school.details}}</div> -->
 
         {% if school.courses[0] %}
         <div class="item-title">Relevant Courses:</div>
@@ -50,7 +52,7 @@
 
 
 
-{% block section0 %}
+{% block section3 %}
 <div class="section-title">Projects</div>
 <div class="subsection">
     {% for project in projects %}
@@ -73,19 +75,25 @@
     <tr>
         <td>{{skills[0]}}</td>
         <td>{{skills[1]}}</td>
-    </tr>
-    <tr>
         <td>{{skills[2]}}</td>
-        <td>{{skills[3]}}</td>
     </tr>
     <tr>
+        <td>{{skills[3]}}</td>
         <td>{{skills[4]}}</td>
         <td>{{skills[5]}}</td>
     </tr>
-    {% if skills[7] %}
+    {% if skills[8] %}
     <tr>
         <td>{{skills[6]}}</td>
         <td>{{skills[7]}}</td>
+        <td>{{skills[8]}}</td>
+    </tr>
+    {% endif %}
+    {% if skills[11] %}
+    <tr>
+        <td>{{skills[9]}}</td>
+        <td>{{skills[10]}}</td>
+        <td>{{skills[11]}}</td>
     </tr>
     {% endif %}
 </table>

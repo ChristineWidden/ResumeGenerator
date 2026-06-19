@@ -18,69 +18,88 @@
         "425-442-8220"
     ],
     "website": [
+        "christinewidden.com",
         "https://linktr.ee/cwidden",
         "linkedin.com/in/christinewidden",
         "https://github.com/ChristineWidden"
     ],
     "location": [
+        "Seattle Area",
         "Sammamish, Washington"
     ],
     "work_experience": [
+        {
+            "title": "Production Support Technician",
+            "id": "terraclear",
+            "company": "TerraClear",
+            "start_date": "February 2026",
+            "end_date": "current",
+            "select_description": [
+                [
+                    "Performed quality assurance on machine learning data and managed order release pipeline."
+                ],
+                [
+                    "Validate and process large-scale machine learning datasets to improve AI model quality and data consistency for industrial automation systems.",
+                    "Manage order release pipelines for AI-driven industrial hardware."
+                ],
+                [
+                    "Validate and process large-scale machine learning datasets to improve model quality and data consistency for industrial automation systems.",
+                    "Support operational release workflows for AI-enabled hardware deployments and production systems."
+                ]
+            ],
+            "company_website": "https://www.flatninegames.com/",
+            "keywords": [
+                "AI",
+                "Artificial Intelligence"
+            ]
+        },
         {
             "title": "Beta Tester",
             "id": "letterlost",
             "company": "FlatNine Games",
             "start_date": "December 2025",
-            "end_date": "Current",
-            "descriptions": [
-                "Playtested an in-development game, providing detailed feedback on bugs and user experience."
+            "end_date": "January 2026",
+            "select_description": [
+                [
+                    "Playtested an in-development game, providing detailed feedback on bugs and user experience."
+                ],
+                []
             ],
-            "keywords":
-            [
+            "company_website": "https://www.flatninegames.com/",
+            "keywords": [
                 "AI",
                 "Artificial Intelligence"
             ]
         },
         {
             "title": "Software Engineer (Freelance)",
-            "id": "dataannotation_temp",
             "company": "DataAnnotation",
             "start_date": "August 2025",
-            "end_date": "Current",
-            "description": [
-                "Created and reviewed diverse coding tasks across Python, C++, and JavaScript, providing clear solutions and feedback to refine AI systems."
+            "end_date": "February 2026",
+            "select_description": [
+                [
+                    "Created and reviewed complex coding and reasoning tasks used to evaluate and refine AI systems.",
+                    "Analyzed code quality, algorithmic correctness, and technical responses across Python, C++, and JavaScript.",
+                    "Provided detailed feedback to improve model performance, reasoning quality, and accuracy."
+                ],
+                [
+                    "Created and reviewed diverse coding tasks across major languages, providing clear solutions and feedback."
+                ],
+                [
+                    "Created and reviewed diverse coding tasks across Python, C++, and JavaScript, providing clear solutions and feedback to refine AI systems."
+                ],
+                [
+                    "Refined AI systems by creating and reviewing complex coding tasks in C++ and Python.",
+                    "Provided detailed technical feedback on algorithmic efficiency and code quality."
+                ],
+                [
+                    "Developed and evaluated software solutions in Python, C++, and JavaScript to support training and evaluation of AI systems.",
+                    "Analyzed code quality, correctness, and performance across a variety of programming tasks."
+                ],
+                []
             ],
-            "keywords":
-            [
-                "AI",
-                "Artificial Intelligence"
-            ]
-        },
-        {
-            "title": "Software Engineer (Contract)",
-            "id": "dataannotation_temp",
-            "company": "DataAnnotation",
-            "start_date": "August 2025",
-            "end_date": "Current",
-            "description": [
-                "Created and reviewed diverse coding tasks across Python, C++, and JavaScript, providing clear solutions and feedback to refine AI systems."
-            ],
-            "keywords":
-            [
-                "AI",
-                "Artificial Intelligence"
-            ]
-        },
-        {
-            "title": "Software Engineer (Contract)",
-            "company": "DataAnnotation",
-            "start_date": "August 2024",
-            "end_date": "Current",
-            "description": [
-                "Created and reviewed diverse coding tasks across major languages, providing clear solutions and feedback."
-            ],
-            "keywords":
-            [
+            "company_website": "https://www.dataannotation.tech/",
+            "keywords": [
                 "AI",
                 "Artificial Intelligence"
             ]
@@ -91,10 +110,18 @@
             "company": "Hypertherm",
             "start_date": "June 2024",
             "end_date": "September 2024",
-            "description": [
-                "Developed Python test scripts in TestComplete to automate UI localization testing, verifying multi-language functionality for client-facing applications. Submitted bug reports with Jira.",
-                "Improved test coverage and streamlined bug reporting, reducing manual testing and contributing to efficient, high-quality software releases."
+            "select_description": [
+                [
+                    "Developed Python test scripts in TestComplete to automate UI localization testing, verifying multi-language functionality for client-facing applications. Submitted bug reports with Jira.",
+                    "Improved test coverage and streamlined bug reporting, reducing manual testing and contributing to efficient, high-quality software releases."
+                ],
+                [
+                    "Developed Python automation scripts in TestComplete for multilingual UI testing and regression validation.",
+                    "Improved test coverage and streamlined bug reporting workflows using Jira."
+                ],
+                []
             ],
+            "company_website": "https://www.omax.com/en/us",
             "keywords": [
                 "Python",
                 "TestComplete",
@@ -114,11 +141,26 @@
             "company": "Cal Poly",
             "start_date": "September 2023",
             "end_date": "March 2024",
-            "description": [
-                "Advised students on setting up development environments, managing work balance with a group, and developing and debugging their games made in Unity, Inform7, Godot, and Unreal Engine, and written in languages such as C#, C++, and Python.",
-                "Aided Dr. April Grow in grading student’s game analysis essays and other writeups.",
-                "Provided further game development advice and programming assistance outside of class hours."
+            "select_description": [
+                [
+                    "Advised students on setting up development environments, managing work balance with a group, and developing and debugging their games made in Unity, Inform7, Godot, and Unreal Engine, and written in languages such as C#, C++, and Python.",
+                    "Aided Dr. April Grow in grading student’s game analysis essays and other writeups.",
+                    "Provided further game development advice and programming assistance outside of class hours."
+                ],
+                [
+                    "Guided students in software development practices, debugging, and programming across multiple engines."
+                ],
+                [
+                    "Mentored students in C++, Unreal Engine, and Unity for Interactive Entertainment courses.",
+                    "Debugged complex engine-level issues and advised on software development life cycles (SDLC)."
+                ],
+                [
+                    "Mentored students in Unity, Unreal Engine, Godot, and C++/C# programming for interactive software development courses.",
+                    "Assisted students with debugging, development workflows, and collaborative software project practices."
+                ],
+                []
             ],
+            "company_website": "https://www.calpoly.edu/major/computer-science",
             "keywords": [
                 "Unity",
                 "Godot",
@@ -137,35 +179,28 @@
             ]
         },
         {
-            "title": "Interactive Entertainment Instructional Student Assistant",
-            "id": "interactive_entertainment_isa",
-            "company": "Cal Poly",
-            "start_date": "September 2023",
-            "end_date": "March 2024",
-            "description": [
-                "Guided students in software development practices, debugging, and programming across multiple engines."
-            ],
-            "keywords": [
-            ]
-        },
-        {
-            "title": "Interactive Entertainment Instructional Student Assistant",
-            "company": "Cal Poly",
-            "start_date": "September 2023",
-            "end_date": "March 2024",
-            "keywords": []
-        },
-        {
             "title": "Software Development Engineer in Test Intern",
             "id": "symetrix_intern",
             "company": "Symetrix",
             "start_date": "June 2023",
             "end_date": "September 2023",
-            "description": [
-                "Was responsible for developing the entire automated UI test suite for an application.",
-                "Taught myself to use the Playwright test automation library with TypeScript based on my experience with Selenium.",
-                "Utilized Git and GitHub Actions for version control and reviewed the pull requests of coworkers, updated codebase through CI/CD, and utilized Agile and Jira for project management and bug reporting."
+            "select_description": [
+                [
+                    "Was responsible for developing the entire automated UI test suite for an application.",
+                    "Taught myself to use the Playwright test automation library with TypeScript based on my experience with Selenium.",
+                    "Utilized Git and GitHub Actions for version control and reviewed the pull requests of coworkers, updated codebase through CI/CD, and utilized Agile and Jira for project management and bug reporting."
+                ],
+                [
+                    "Built and maintained an automated UI test suite using Playwright and TypeScript.",
+                    "Utilized GitHub Actions, CI/CD workflows, and Agile development practices for collaborative testing and deployment."
+                ],
+                [
+                    "Built and maintained automated UI testing infrastructure using Playwright and TypeScript for web applications.",
+                    "Utilized GitHub Actions, CI/CD workflows, and Agile development practices for collaborative testing and deployment."
+                ],
+                []
             ],
+            "company_website": "https://www.symetrix.co/",
             "keywords": [
                 "Playwright",
                 "TypeScript",
@@ -183,23 +218,23 @@
             ]
         },
         {
-            "title": "Software Development Engineer in Test Intern",
-            "company": "Symetrix",
-            "start_date": "June 2023",
-            "end_date": "September 2023",
-            "keywords": []
-        },
-        {
             "title": "Corporate Enterprise Architecture Intern",
             "id": "compucom_intern",
             "company": "CompuCom",
             "start_date": "July 2022",
             "end_date": "January 2023",
-            "description": [
-                "Reported to the IT Architect and assisted with the management of data relating to the internal Enterprise Architecture Group.",
-                "Automated consolidation of data from different sources in Excel, utilizing macros and the VLOOKUP formula.",
-                "Facilitated communication between manager and team in the creation of SharePoint pages to organize department information and appointments on an internal company website."
+            "select_description": [
+                [
+                    "Reported to the IT Architect and assisted with the management of data relating to the internal Enterprise Architecture Group.",
+                    "Automated consolidation of data from different sources in Excel, utilizing macros and the VLOOKUP formula.",
+                    "Facilitated communication between manager and team in the creation of SharePoint pages to organize department information and appointments on an internal company website."
+                ],
+                [
+                    "Automated Excel data workflows with VBA and built SharePoint pages to support enterprise IT team."
+                ],
+                []
             ],
+            "company_website": "https://www.compucom.com/",
             "keywords": [
                 "Excel",
                 "VBA Macros",
@@ -212,24 +247,6 @@
                 "Documentation",
                 "Enterprise Architecture"
             ]
-        },
-        {
-            "title": "Corporate Enterprise Architecture Intern",
-            "id": "compucom_intern",
-            "company": "CompuCom",
-            "start_date": "July 2022",
-            "end_date": "January 2023",
-            "description": [
-                "Automated Excel data workflows with VBA and built SharePoint pages to support enterprise IT team."
-            ],
-            "keywords": []
-        },
-        {
-            "title": "Corporate Enterprise Architecture Intern",
-            "company": "CompuCom",
-            "start_date": "July 2022",
-            "end_date": "January 2023",
-            "keywords": []
         }
     ],
     "skills": [
@@ -238,6 +255,7 @@
         "C and C++",
         "C#, C++, Java, Python, JavaScript, Others",
         "C#, C++, Java, Python, JavaScript",
+        "C-related languages",
         "Java, Python, JavaScript",
         "Various Programming Languages",
         "Java",
@@ -248,16 +266,20 @@
         "Node",
         "Node.js",
         "Object-Oriented Programming",
-        "Computer Security Basics",
+        "Computer Security Fundamentals",
         "Postman",
         "Linear Algebra",
+        "Calculus",
         "MySQL",
+        "SQL",
         "Git and GitHub",
         "GitHub, GitHub Actions",
+        "Git, GitHub, GitHub Actions",
         "Linux, Windows, Mac",
         "Windows, Linux, Mac",
         "Linux",
         "Windows",
+        "Docker",
         "Excel",
         "Google Sheets",
         "Mac",
@@ -270,10 +292,12 @@
         "Unity",
         "Unreal Engine 5",
         "Video Game Accessibility",
+        "Gameplay Systems",
         "OpenGL",
         "Computer Graphics",
         "Autodesk Maya",
         "GLSL",
+        "HLSL",
         "Shaders",
         "Software Development",
         "Software Development Life Cycle",
@@ -284,6 +308,7 @@
         "Software Testing",
         "Unit Testing",
         "QA Testing",
+        "Regression Testing",
         "Playwright",
         "Selenium",
         "TestComplete",
@@ -309,10 +334,16 @@
         "Written Communication",
         "Communication",
         "Artificial Intelligence",
-        "Tensorflow",
+        "LLM Evaluation",
         "Machine Learning",
         "Deep Learning",
-        "Data Mining"
+        "TensorFlow",
+        "PyTorch",
+        "NumPy",
+        "Pandas",
+        "Computer Vision",
+        "Data Mining",
+        "MongoDB"
     ],
     "schools": [
         {
@@ -321,14 +352,13 @@
             "degree": "Master's in Computer Science",
             "start_date": "September 2023",
             "end_date": "June 2025",
-            "details": "Graduated with Distinction",
+            "details": "Graduated with Distinction | GPA 3.70",
             "courses": [
                 {
                     "name": "Software Engineering I: Graduate Level",
                     "id": "software_engineering_1",
                     "description": "In-depth study of requirements engineering, design patterns, software project management, formal specifications and object-oriented analysis.",
-                    "keywords": [
-                    ]
+                    "keywords": []
                 },
                 {
                     "name": "Artificial Intelligence: Graduate Level",
@@ -366,8 +396,7 @@
                         "Rigging",
                         "Computer Graphics"
                     ]
-                }
-,
+                },
                 {
                     "name": "System Security",
                     "id": "system_security",
@@ -392,7 +421,7 @@
             "start_date": "September 2019",
             "end_date": "June 2023",
             "location": "San Luis Obispo",
-            "details": "Graduated Cum Laude",
+            "details": "Graduated Cum Laude | GPA 3.66",
             "courses": [
                 {
                     "name": "Computer Graphics",
@@ -592,7 +621,91 @@
     ],
     "projects": [
         {
-            "name": "Master's Thesis: The Impact of Accessibility Features on Player Experience in Video Games",
+            "name": "Curated Resume Builder",
+            "id": "resume_builder",
+            "desc": [
+                "Developed a web application that generates tailored PDF resumes by dynamically selecting skills and experience from a centralized data model.",
+                "Technologies: Python, JavaScript, Node.js, HTML, CSS"
+            ],
+            "keywords": [
+                "Python",
+                "JavaScript",
+                "Node.js",
+                "CSS",
+                "HTML",
+                "Web Development",
+                "PDF Generation",
+                "User Interface Design"
+            ]
+        },
+        {
+            "name": "Curated Resume Builder",
+            "id": "resume_builder",
+            "desc": [
+                "Developed a full-stack web application that generates customized PDF resumes from a centralized skills and experience data model.",
+                "Built backend logic for dynamic content generation and document creation using Python and Node.js."
+            ],
+            "keywords": [
+                "Python",
+                "JavaScript",
+                "Node.js",
+                "CSS",
+                "HTML",
+                "Web Development",
+                "PDF Generation",
+                "User Interface Design"
+            ]
+        },
+        {
+            "name": "Portfolio Website",
+            "id": "portfolio_site",
+            "desc": [
+                "Built a portfolio website from the ground up using React."
+            ],
+            "keywords": [
+                "React",
+                "JavaScript",
+                "HTML",
+                "CSS",
+                "Frontend Development",
+                "Front end",
+                "Web Development"
+            ]
+        },
+        {
+            "name": "Portfolio Website",
+            "id": "portfolio_site",
+            "desc": [
+                "Developed a responsive portfolio website using React to showcase software projects and technical work."
+            ],
+            "keywords": [
+                "React",
+                "JavaScript",
+                "HTML",
+                "CSS",
+                "Frontend Development",
+                "Front end",
+                "Web Development"
+            ]
+        },
+        {
+            "name": "Master's Thesis: <a href=\"https://digitalcommons.calpoly.edu/theses/3108/\">The Impact of Accessibility Features on Player Experience in Video Games</a>",
+            "id": "ms_thesis",
+            "desc": [
+                "Designed a 60-page research study and developed a custom Unity-based testing environment to collect data on user interaction.",
+                "Programmed a Kinematic Character Controller from scratch to ensure consistent gameplay feel and precise movement data collection."
+            ],
+            "keywords": [
+                "Writing",
+                "Accessibility",
+                "Game Accessibility",
+                "Accessibility Settings",
+                "Unity",
+                "Game Development"
+            ]
+        },
+        {
+            "name": "Master's Thesis: <a href=\"https://digitalcommons.calpoly.edu/theses/3108/\">The Impact of Accessibility Features on Player Experience in Video Games</a>",
             "id": "ms_thesis",
             "desc": [
                 "A 60-page thesis about my study on accessibility in video games, for my Master's in Computer Science."
@@ -610,16 +723,18 @@
             "name": "Master's Thesis: The Impact of Accessibility Features on Player Experience in Video Games",
             "id": "ms_thesis",
             "desc": [
-                "A 60-page thesis about accessibility in video games, for my Master's in Computer Science. Created a Unity-based game to run a study on how accessibility features affect player experience."
+                "Designed and implemented a Unity-based experimental environment to study the impact of accessibility features on player experience and gameplay interaction."
             ],
-            "keywords": [
-                "Writing",
-                "Accessibility",
-                "Game Accessibility",
-                "Accessibility Settings",
-                "Unity",
-                "Game Development"
-            ]
+            "keywords": []
+        },
+        {
+            "name": "Physically-Based Locomotion System (Custom Physics)",
+            "id": "locomotion",
+            "desc": [
+                "Developed a custom 2D kinematics engine in Unity to override default physics.",
+                "Implemented Euler integration for velocity and acceleration to achieve precise character locomotion control (Mario-style movement)."
+            ],
+            "keywords": []
         },
         {
             "name": "Alien Invasion",
@@ -640,6 +755,23 @@
                 "Playtesting",
                 "Agile Development"
             ]
+        },
+        {
+            "name": "Alien Invasion",
+            "id": "alien_invasion",
+            "desc": [
+                "Worked with a team to develop a Unity-based tower defense game written in the language C#."
+            ],
+            "keywords": []
+        },
+        {
+            "name": "Alien Invasion",
+            "id": "alien_invasion",
+            "desc": [
+                "Collaborated on a Unity-based tower defense game developed in C#.",
+                "Designed modular object-oriented upgrade systems to support scalable gameplay mechanics and efficient feature development."
+            ],
+            "keywords": []
         },
         {
             "name": "Goblin Chase",
@@ -675,37 +807,22 @@
             ]
         },
         {
+            "name": "Real-Time Rendering & Shaders (OpenGL)",
+            "id": "graphics_projects",
+            "desc": [
+                "Authored custom vertex and fragment shaders in GLSL to implement real-time lighting and textures.",
+                "Applied Linear Algebra for 3D coordinate transformations and optimized GPU rendering performance."
+            ],
+            "keywords": []
+        },
+        {
             "name": "OpenGL Projects",
-            "id": "opengl_projects",
+            "id": "graphics_projects",
             "desc": [
                 "Implemented custom vertex and fragment shaders in GLSL to create real-time lighting, texturing, and visual effects in OpenGL.",
                 "Optimized rendering performance by applying fundamental algorithms and data structures in C++."
             ],
-            "keywords": [
-                "OpenGL",
-                "C++",
-                "3D Graphics",
-                "Rendering",
-                "Animation",
-                "Shaders",
-                "GPU Programming"
-            ]
-        },
-        {
-            "name": "Portfolio Website",
-            "id": "portfolio_site",
-            "desc": [
-                "Built a portfolio website from the ground up using React."
-            ],
-            "keywords": [
-                "React",
-                "JavaScript",
-                "HTML",
-                "CSS",
-                "Frontend Development",
-                "Front end",
-                "Web Development"
-            ]
+            "keywords": []
         },
         {
             "name": "Operating Systems Assigned Projects",
@@ -733,24 +850,6 @@
             ]
         },
         {
-            "name": "Curated Resume Builder",
-            "id": "resume_builder",
-            "desc": [
-                "Wrote a web app that allows me to more efficiently create resumes for jobs, allowing the user to check off skills and experience from a masterlist in order to generate a PDF accordingly.",
-                "Technologies: Python, JavaScript, Node, CSS, HTML"
-            ],
-            "keywords": [
-                "Python",
-                "JavaScript",
-                "Node.js",
-                "CSS",
-                "HTML",
-                "Web Development",
-                "PDF Generation",
-                "User Interface Design"
-            ]
-        },
-        {
             "name": "Task Management iOS App",
             "id": "task_ios",
             "desc": [
@@ -775,6 +874,29 @@
             "desc": [
                 "Worked with a team while following the software development life cycle to create a note-taking web app and connected the backend to MongoDB via Mongoose. Implemented a text editing library.",
                 "Technologies: Mongoose, MongoDB, React, REST protocol, JavaScript"
+            ],
+            "keywords": [
+                "Web Development",
+                "JavaScript",
+                "React",
+                "Node.js",
+                "MongoDB",
+                "Mongoose",
+                "REST API",
+                "Frontend Development",
+                "Backend Development",
+                "Full-Stack Development",
+                "Text Editing Libraries",
+                "Team Collaboration",
+                "Agile Development",
+                "Software Development Life Cycle"
+            ]
+        },
+        {
+            "name": "Notes Made Easy",
+            "id": "notes_made_easy",
+            "desc": [
+                "Collaborated on a full-stack note-taking web application using React, MongoDB, and REST APIs. Implemented rich-text editing functionality and backend data persistence for user-generated content."
             ],
             "keywords": [
                 "Web Development",
@@ -825,11 +947,42 @@
             ]
         },
         {
+            "name": "Recipe Recommender Algorithm",
+            "id": "recipe_recommender",
+            "desc": [
+                "Built a recommendation system using collaborative filtering techniques on Kaggle grocery basket datasets to generate recipe recommendations based on available ingredients. Used Pandas and Numpy."
+            ],
+            "keywords": [
+                "collaborative filtering",
+                "kaggle",
+                "data science",
+                "AI",
+                "Machine Learning"
+            ]
+        },
+        {
             "name": "Image2Recipe",
             "id": "image_2_recipe",
             "desc": [
                 "Used a Convolutional Neural Network to identify common ingredients in photos of groceries set out, in order to suggest recipes to the user.",
                 "Primarily utilized tensorflow and numpy."
+            ],
+            "keywords": [
+                "Python",
+                "TensorFlow",
+                "NumPy",
+                "Computer Vision",
+                "CNN",
+                "Machine Learning",
+                "AI",
+                "Image Recognition"
+            ]
+        },
+        {
+            "name": "Image2Recipe",
+            "id": "image_2_recipe",
+            "desc": [
+                "Developed a CNN-based computer vision pipeline using TensorFlow and NumPy to classify grocery ingredients from images and generate recipe suggestions."
             ],
             "keywords": [
                 "Python",
@@ -858,6 +1011,45 @@
                 "LSTM",
                 "Policy Optimization",
                 "Game Theory"
+            ]
+        },
+        {
+            "name": "Prisoner's Dilemma AI",
+            "id": "prisoners_ai",
+            "desc": [
+                "Developed a reinforcement learning agent in Python to play iterative Prisoner’s Dilemma against classical strategy agents. Implemented PPO-based deep learning models with LSTM and multilayer perceptron architectures to optimize decision-making performance over repeated interactions."
+            ],
+            "keywords": [
+                "Python",
+                "AI",
+                "Deep Learning",
+                "Reinforcement Learning",
+                "RNN",
+                "LSTM",
+                "Policy Optimization",
+                "Game Theory"
+            ]
+        },
+        {
+            "name": "Maya Projects",
+            "id": "maya_projects",
+            "desc": [
+                "Completed various projects demonstrating 3d modeling, texturing, rigging, animation, and rendering skills using Autodesk Maya."
+            ],
+            "keywords": [
+                "Maya",
+                "3D Modeling"
+            ]
+        },
+        {
+            "name": "AI Search and Rescue",
+            "id": "maya_projects",
+            "desc": [
+                "Developed AI image recognition for use in a search and rescue app. Utilized Docker."
+            ],
+            "keywords": [
+                "Maya",
+                "3D Modeling"
             ]
         }
     ],

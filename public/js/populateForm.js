@@ -1,10 +1,10 @@
 import { fetchFormData } from './fetchFormData.js';
 import generateSection from './sectionFactories/generateSection.js'
 
-console.log("✅ Loading populate.js");
+console.log("Loading populate.js");
 
 export default async function populateForm() {
-    console.log("⚙️ Running populateForm");
+    console.log("Running populateForm");
 
     try {
         const { masterlistData, referenceData } = await fetchFormData();
@@ -16,7 +16,7 @@ export default async function populateForm() {
 
         for (const key in referenceData) {
             
-            // TODO what does this do?
+            // safety check against inherited properties from prototypes
             if (!Object.hasOwnProperty.call(referenceData, key)) continue;
 
             // Used just to find out how to format things, what items to make
@@ -35,7 +35,7 @@ export default async function populateForm() {
             </div>
             `;
     } catch (err) {
-        console.error("❌ Failed to populate form:", err);
+        console.error("Failed to populate form:", err);
         document.getElementById("messageContainer").innerText = "Error loading form data.";
     }
     console.log("✅ Form populated");

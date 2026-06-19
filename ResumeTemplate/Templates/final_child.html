@@ -2,7 +2,7 @@
 
 {% extends "dev2.html" %}
 
-{% block section0 %}
+{% block section2 %}
 <div class="section-title">Education</div>
 {% for school in schools %}
 <div class="subsection">
@@ -25,7 +25,7 @@
 {% endblock %}
 
 
-{% block section2 %}
+{% block section3 %}
 <div class="section-title">Experience</div>
 {% for job in work_experience %}
 <div class="subsection">
@@ -43,7 +43,7 @@
 
 
 
-{% block section4 %}
+{% block section0 %}
 {% if extra_section_name %}
 <div class="section-title">{{extra_section_name}}</div>
 <div class="subsection">{{extra_section_contents}}</div>
@@ -52,7 +52,7 @@
 
 
 
-{% block section3 %}
+{% block section4 %}
 <div class="section-title">Projects</div>
 <div class="subsection">
     {% for project in projects %}
@@ -94,6 +94,20 @@
         <td>{{skills[9]}}</td>
         <td>{{skills[10]}}</td>
         <td>{{skills[11]}}</td>
+    </tr>
+    {% endif %}
+    {% if skills[14] %}
+    <tr>
+        <td>{{skills[12]}}</td>
+        <td>{{skills[13]}}</td>
+        <td>{{skills[14]}}</td>
+    </tr>
+    {% endif %}
+    {% if skills[17] %}
+    <tr>
+        <td>{{skills[15]}}</td>
+        <td>{{skills[16]}}</td>
+        <td>{{skills[17]}}</td>
     </tr>
     {% endif %}
 </table>

@@ -28,6 +28,7 @@ app.post('/generate-json', upload.none(), async (req, res) => {
         const masterlistData = JSON.parse(await fs.readFile(MASTERLIST_PATH, { encoding: 'utf8' }));
         const resumeData = {}
         const schoolCourseDict = {}
+        const selectOptionsDict = {} // Track selected indices for select_* fields
 
         // Parse form input into structured JSON
         for (const key in req.body) {
@@ -37,33 +38,99 @@ app.post('/generate-json', upload.none(), async (req, res) => {
                 // Dropdown field with optional "Other" input
                 resumeData[key] = val[0] === "Other" ? val[1] : val[0]
                 console.log(`Field ${key}: ${resumeData[key]}`);
-            } else {
-                // Other data comes as checkboxes
-                // in forms like skills.0 skills.1 etc.
-                // so here we get the category (name) and the index
-                const parts = key.split('.')
-                const category_name = parts[0]
-                const index = parseInt(parts[parts.length - 1])
-
-                // courses and section order are formatted differently
-                if (category_name !== 'courses' && category_name !== 'section_order') {
-                    // If this category doesn't exist yet, make it
-                    if (!(resumeData[category_name])) resumeData[category_name] = []
-                    // Retrieve the item with the same index from the masterlist and add it
-                    resumeData[category_name].push(masterlistData[category_name][index])
-
-                } else if (category_name === 'courses') {
-                    // courses has nested checkboxes so needs special treatment
-                    const degree = parts[1]
-                    // If this degree doesn't exist yet, put the school in the school dict
-                    if (!schoolCourseDict[degree]) schoolCourseDict[degree] = [];
-                    schoolCourseDict[degree].push(index)
-                } else if (category_name === 'section_order') {
-                    // section order isn't checkbox basd so needs special treatment
-                    // literally just the data as-is
-                    resumeData[key] = JSON.parse(val)
-                }
+                continue
             }
+            
+            // Parse checkbox and radio fields
+            // Other data comes as checkboxes
+            // in forms like skills.0 skills.1 etc.
+            // so here we get the category (name) and the index
+            const parts = key.split('.')
+
+            // E.g. ["work_experience","2"] for checkbox
+            // or ["work_experience","2","select_title"] for radio group
+            const topCategory = parts[0]
+
+            // section_order (special) - stored literally
+            if (topCategory === 'section_order') {
+                resumeData[key] = JSON.parse(val);
+                continue;
+            }
+
+            const index = parseInt(parts[parts.length - 1])
+
+            // courses have nested checkboxes so need special treatment
+            if (topCategory === 'courses') {
+                const degree = parts[1]
+                if (!schoolCourseDict[degree]) schoolCourseDict[degree] = [];
+                schoolCourseDict[degree].push(index)
+                continue
+            } 
+
+
+            // Handle select_* radio fields (e.g., work_experience.2.select_title)
+            const selectSegmentIndex = parts.findIndex((p, i) => i > 0 && p.startsWith('select_'));
+            if (selectSegmentIndex !== -1) {
+                const itemIndex = parseInt(parts[1])
+                const selectKey = parts[selectSegmentIndex]
+                
+                if (!selectOptionsDict[topCategory]) selectOptionsDict[topCategory] = {}
+                if (!selectOptionsDict[topCategory][itemIndex]) selectOptionsDict[topCategory][itemIndex] = {}
+                
+                // Store the selected option index
+                selectOptionsDict[topCategory][itemIndex][selectKey] = parseInt(val)
+                console.log(`Selected: ${topCategory}[${itemIndex}].${selectKey} = option ${val}`)
+                continue
+            }
+
+            if (!(resumeData[topCategory])) resumeData[topCategory] = []
+            
+            const itemFromMasterlist = JSON.parse(JSON.stringify(masterlistData[topCategory][index])) // deep copy
+            resumeData[topCategory].push(itemFromMasterlist)
+        }
+
+        // Apply selected select_* options to work_experience, projects, etc.
+        for (const [category, itemDict] of Object.entries(selectOptionsDict)) {
+            if (!resumeData[category]) continue;
+
+            resumeData[category].forEach((item, pushedPosition) => {
+                // Find the corresponding masterlist index
+                const masterlistArray = masterlistData[category] || [];
+                let masterIndex = -1;
+                if (item.id) {
+                    masterIndex = masterlistArray.findIndex(m => m.id === item.id);
+                }
+                if (masterIndex === -1) {
+                    masterIndex = masterlistArray.findIndex(m => 
+                        m.company === item.company && 
+                        m.start_date === item.start_date && 
+                        m.title === item.title
+                    )
+                }
+                if (masterIndex === -1) {
+                    console.warn(`Warning: Could not find matching masterlist item for ${category}[${pushedPosition}]`);
+                    return;
+                }
+                
+                if (!itemDict[masterIndex]) return;
+
+                const selections = itemDict[masterIndex]
+                const masterItem = masterlistData[category][masterIndex]
+                
+                // Apply select_title
+                if (selections['select_title'] !== undefined && masterItem.select_title) {
+                    const selectedIdx = selections['select_title']
+                    item.title = masterItem.select_title[selectedIdx]
+                }
+                
+                // Apply select_description
+                if (selections['select_description'] !== undefined && masterItem.select_description) {
+                    const selectedIdx = selections['select_description']
+                    item.description = masterItem.select_description[selectedIdx]
+                }
+                
+            })
+
         }
 
         // Filter courses based on schoolCourseDict
@@ -73,8 +140,6 @@ app.post('/generate-json', upload.none(), async (req, res) => {
                 const indexesToKeep = schoolCourseDict[schoolID];
 
                 if (indexesToKeep) {
-                    const indexesToKeep = schoolCourseDict[schoolID]; // discard any schools that weren't checked
-                    // Filter the courses array based on the indexes to keep
                     school.courses = school.courses.filter((_, i) => indexesToKeep.includes(i));
                 } else {
                     school.courses = []

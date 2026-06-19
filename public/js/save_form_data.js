@@ -32,7 +32,6 @@ document.addEventListener('DOMContentLoaded', function () {
                 // Handle "custom dropdown + input" combo
                 const dropdown = form.querySelector(`select[name="${name}"]`);
                 const input = form.querySelector(`input[type="text"][name="${name}"]`);
-
                 if (dropdown && input) {
                     const isOther = dropdown.value === "Other";
                     dataToSave[name] = isOther ? input.value : dropdown.value;
@@ -40,18 +39,26 @@ document.addEventListener('DOMContentLoaded', function () {
                     continue;
                 }
 
+
+                if (element.type === 'radio') {
+                    // console.log(`${element.name}:${element.getAttribute('data-option-index')} is a radio. Checked: ${element.checked}`);
+                    if (element.checked) {
+                        dataToSave[name] = element.value;
+                        processedNames.add(name);
+                    }
+                    continue;
+                } 
+
                 // Regular input/checkbox/radio
                 if (element.type === 'checkbox') {
                     dataToSave[name] = element.checked;
-                } else if (element.type === 'radio') {
-                    if (element.checked) dataToSave[name] = element.value;
                 } else {
                     dataToSave[name] = element.value;
                 }
 
                 processedNames.add(name);
             }
-
+            
             localStorage.setItem('resumeFormData', JSON.stringify(dataToSave));
             console.log("Data changed")
         })
@@ -93,6 +100,10 @@ document.addEventListener('formReady', () => {
                         otherInput.dispatchEvent(new Event('input', { bubbles: true }));
                     }
                 }
+            } else if (element.type === 'radio') {
+                const savedValue = savedData[element.name];
+                const radio = form.querySelector(`input[name="${element.name}"][value="${savedValue}"]`);
+                if (radio) radio.checked = true;
             } else if (element.type === 'text') {
                 element.value = savedData[element.name];
             } else if (element.type === 'hidden') {

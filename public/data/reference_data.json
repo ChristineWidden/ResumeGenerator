@@ -11,17 +11,8 @@
             "company": "x",
             "start_date": "x",
             "end_date": "x",
-            "description": [
-                "x"
-            ]
-        },
-        {
-            "title": "x",
-            "company": "x",
-            "start_date": "x",
-            "end_date": "x",
-            "description": [
-                "x"
+            "select_description": [
+                ["x"]
             ]
         }
     ],

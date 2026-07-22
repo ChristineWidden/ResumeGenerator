@@ -3,7 +3,7 @@
   "job_title": "Software Engineer",
   "email": "ChristineWidden@Outlook.com",
   "phone": "425-442-8220",
-  "website": "http://christinewidden.com",
+  "website": "https://github.com/ChristineWidden",
   "location": "Washington, USA",
   "work_experience": [
     {
@@ -11,7 +11,7 @@
       "id": "terraclear",
       "company": "TerraClear",
       "start_date": "February 2026",
-      "end_date": "current",
+      "end_date": "June 2026",
       "select_description": [
         [
           "Performed quality assurance on machine learning data and managed order release pipeline."
@@ -23,6 +23,13 @@
         [
           "Validate and process large-scale machine learning datasets to improve model quality and data consistency for industrial automation systems.",
           "Support operational release workflows for AI-enabled hardware deployments and production systems."
+        ],
+        [
+          "Support operational release workflows and troubleshoot production issues for AI-enabled hardware deployments and customer-facing systems."
+        ],
+        [
+          "Supported production deployments and investigated operational issues for AI-enabled hardware and customer-facing software systems.",
+          "Collaborated across teams to maintain system reliability, resolve release blockers, and support ongoing production operations."
         ]
       ],
       "company_website": "https://www.flatninegames.com/",
@@ -31,8 +38,8 @@
         "Artificial Intelligence"
       ],
       "description": [
-        "Validate and process large-scale machine learning datasets to improve AI model quality and data consistency for industrial automation systems.",
-        "Manage order release pipelines for AI-driven industrial hardware."
+        "Supported production deployments and investigated operational issues for AI-enabled hardware and customer-facing software systems.",
+        "Collaborated across teams to maintain system reliability, resolve release blockers, and support ongoing production operations."
       ]
     },
     {
@@ -232,23 +239,6 @@
       ]
     }
   ],
-  "skills": [
-    "C#, C++, Java, Python, JavaScript",
-    "TypeScript",
-    "Node.js",
-    "MySQL",
-    "Git, GitHub, GitHub Actions",
-    "Docker",
-    "SDLC",
-    "Regression Testing",
-    "Playwright",
-    "CI/CD",
-    "Agile",
-    "REST API",
-    "React",
-    "Documentation",
-    "MongoDB"
-  ],
   "schools": [
     {
       "name": "Cal Poly SLO",
@@ -275,8 +265,8 @@
       "name": "Curated Resume Builder",
       "id": "resume_builder",
       "desc": [
-        "Developed a full-stack web application that generates customized PDF resumes from a centralized skills and experience data model.",
-        "Built backend logic for dynamic content generation and document creation using Python and Node.js."
+        "Developed a web application that generates tailored PDF resumes by dynamically selecting skills and experience from a centralized data model.",
+        "Technologies: Python, JavaScript, Node.js, HTML, CSS"
       ],
       "keywords": [
         "Python",
@@ -293,7 +283,7 @@
       "name": "Portfolio Website",
       "id": "portfolio_site",
       "desc": [
-        "Developed a responsive portfolio website using React to showcase software projects and technical work."
+        "Built a portfolio website from the ground up using React."
       ],
       "keywords": [
         "React",
@@ -306,64 +296,79 @@
       ]
     },
     {
-      "name": "Notes Made Easy",
-      "id": "notes_made_easy",
+      "name": "Master's Thesis: <a href=\"https://digitalcommons.calpoly.edu/theses/3108/\">The Impact of Accessibility Features on Player Experience in Video Games</a>",
+      "id": "ms_thesis",
       "desc": [
-        "Collaborated on a full-stack note-taking web application using React, MongoDB, and REST APIs. Implemented rich-text editing functionality and backend data persistence for user-generated content."
+        "Designed a 60-page research study and developed a custom Unity-based testing environment to collect data on user interaction.",
+        "Programmed a Kinematic Character Controller from scratch to ensure consistent gameplay feel and precise movement data collection."
       ],
       "keywords": [
-        "Web Development",
-        "JavaScript",
-        "React",
-        "Node.js",
-        "MongoDB",
-        "Mongoose",
-        "REST API",
-        "Frontend Development",
-        "Backend Development",
-        "Full-Stack Development",
-        "Text Editing Libraries",
-        "Team Collaboration",
-        "Agile Development",
-        "Software Development Life Cycle"
-      ]
-    },
-    {
-      "name": "Prisoner's Dilemma AI",
-      "id": "prisoners_ai",
-      "desc": [
-        "Developed a reinforcement learning agent in Python to play iterative Prisoner’s Dilemma against classical strategy agents. Implemented PPO-based deep learning models with LSTM and multilayer perceptron architectures to optimize decision-making performance over repeated interactions."
-      ],
-      "keywords": [
-        "Python",
-        "AI",
-        "Deep Learning",
-        "Reinforcement Learning",
-        "RNN",
-        "LSTM",
-        "Policy Optimization",
-        "Game Theory"
-      ]
-    },
-    {
-      "name": "AI Search and Rescue",
-      "id": "maya_projects",
-      "desc": [
-        "Developed AI image recognition for use in a search and rescue app. Utilized Docker."
-      ],
-      "keywords": [
-        "Maya",
-        "3D Modeling"
+        "Writing",
+        "Accessibility",
+        "Game Accessibility",
+        "Accessibility Settings",
+        "Unity",
+        "Game Development"
       ]
     }
   ],
-  "extra_section_name": "Summary",
-  "extra_section_contents": "Software Engineer with a Master's degree in Computer Science and professional experience developing software applications, automation frameworks, and AI-driven systems. Experienced with Python, Java, JavaScript/TypeScript, C#, REST APIs, databases, automated testing, and Agile development practices. Built full-stack web applications, machine learning systems, and developer tools while collaborating across cross-functional engineering teams.",
+  "extra_section_name": "My Favorite Games",
+  "extra_section_contents": "Dungeons and Dragons, Skyrim, The Legend of Zelda Series, Minecraft",
+  "extra_section2_name": "adsf",
+  "extra_section2_contents": "asdfgh",
   "section_order": [
-    "extra",
+    "projects",
     "skills",
-    "education",
     "experience",
-    "projects"
+    "education",
+    "extra",
+    "extra2"
+  ],
+  "skills": [
+    {
+      "name": "Programming Languages",
+      "skills": [
+        "C",
+        "C++",
+        "C#",
+        "Java",
+        "Python",
+        "JavaScript",
+        "TypeScript",
+        "SQL"
+      ]
+    },
+    {
+      "name": "Software Testing & QA",
+      "skills": [
+        "Regression Testing",
+        "Playwright",
+        "Selenium",
+        "TestComplete"
+      ]
+    },
+    {
+      "name": "Software Engineering",
+      "skills": [
+        "Git, GitHub, GitHub Actions"
+      ]
+    },
+    {
+      "name": "Artificial Intelligence & Data Science",
+      "skills": [
+        "Machine Learning",
+        "PyTorch",
+        "NumPy"
+      ]
+    },
+    {
+      "name": "Operating Systems & Tools",
+      "skills": [
+        "Linux",
+        "Windows",
+        "Mac",
+        "Excel"
+      ]
+    }
   ]
 }

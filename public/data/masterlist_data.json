@@ -18,6 +18,7 @@
         "425-442-8220"
     ],
     "website": [
+        "christinewidden.com | https://github.com/ChristineWidden | linkedin.com/in/christinewidden",
         "christinewidden.com",
         "https://linktr.ee/cwidden",
         "linkedin.com/in/christinewidden",
@@ -33,7 +34,7 @@
             "id": "terraclear",
             "company": "TerraClear",
             "start_date": "February 2026",
-            "end_date": "current",
+            "end_date": "June 2026",
             "select_description": [
                 [
                     "Performed quality assurance on machine learning data and managed order release pipeline."
@@ -257,100 +258,140 @@
         }
     ],
     "skills": [
-        "C",
-        "C++",
-        "C and C++",
-        "C#, C++, Java, Python, JavaScript, Others",
-        "C#, C++, Java, Python, JavaScript",
-        "C-related languages",
-        "Java, Python, JavaScript",
-        "Various Programming Languages",
-        "Java",
-        "C#",
-        "Python",
-        "JavaScript",
-        "TypeScript",
-        "Node",
-        "Node.js",
-        "Object-Oriented Programming",
-        "Computer Security Fundamentals",
-        "Postman",
-        "Linear Algebra",
-        "Calculus",
-        "MySQL",
-        "SQL",
-        "Git and GitHub",
-        "GitHub, GitHub Actions",
-        "Git, GitHub, GitHub Actions",
-        "Linux, Windows, Mac",
-        "Windows, Linux, Mac",
-        "Linux",
-        "Windows",
-        "Docker",
-        "Excel",
-        "Google Sheets",
-        "Mac",
-        "iOS",
-        "Unix",
-        "PowerShell",
-        "Terminal Commands",
-        "Game Design",
-        "Game Development",
-        "Unity",
-        "Unreal Engine 5",
-        "Video Game Accessibility",
-        "Gameplay Systems",
-        "OpenGL",
-        "Computer Graphics",
-        "Autodesk Maya",
-        "GLSL",
-        "HLSL",
-        "Shaders",
-        "Software Development",
-        "Software Development Life Cycle",
-        "Software Accessibility",
-        "SDLC",
-        "Automated Test Development",
-        "UI Testing",
-        "Software Testing",
-        "Unit Testing",
-        "QA Testing",
-        "Regression Testing",
-        "Playwright",
-        "Selenium",
-        "TestComplete",
-        "JUnit",
-        "pytest",
-        "CI/CD",
-        "Agile",
-        "Jira",
-        "Azure",
-        "SCRUM Methodology",
-        "Debugging",
-        "Bug Tracking",
-        "Software Debugging",
-        "JavaScript, HTML, CSS",
-        "HTML/CSS",
-        "REST protocol",
-        "REST API",
-        "React",
-        "Swift",
-        "Documentation",
-        "Microsoft Office",
-        "Collaboration",
-        "Written Communication",
-        "Communication",
-        "Artificial Intelligence",
-        "LLM Evaluation",
-        "Machine Learning",
-        "Deep Learning",
-        "TensorFlow",
-        "PyTorch",
-        "NumPy",
-        "Pandas",
-        "Computer Vision",
-        "Data Mining",
-        "MongoDB"
+        {
+            "name": "Programming Languages",
+            "skills": [
+                "C",
+                "C++",
+                "C#",
+                "Java",
+                "Python",
+                "JavaScript",
+                "TypeScript",
+                "Swift",
+                "SQL"
+            ]
+        },
+        {
+            "name": "Web Development",
+            "skills": [
+                "React",
+                "Node.js",
+                "HTML/CSS",
+                "REST API",
+                "REST protocol",
+                "MongoDB"
+            ]
+        },
+        {
+            "name": "Game Development",
+            "skills": [
+                "Unity",
+                "Unreal Engine 5",
+                "Game Development",
+                "Game Design",
+                "Gameplay Systems",
+                "Video Game Accessibility"
+            ]
+        },
+        {
+            "name": "Graphics & Technical Art",
+            "skills": [
+                "Computer Graphics",
+                "OpenGL",
+                "GLSL",
+                "HLSL",
+                "Shaders",
+                "Autodesk Maya"
+            ]
+        },
+        {
+            "name": "Software Testing & QA",
+            "skills": [
+                "Software Testing",
+                "QA Testing",
+                "Regression Testing",
+                "UI Testing",
+                "Unit Testing",
+                "Automated Test Development",
+                "Playwright",
+                "Selenium",
+                "TestComplete",
+                "JUnit",
+                "pytest",
+                "Bug Tracking",
+                "Software Debugging",
+                "Debugging"
+            ]
+        },
+        {
+            "name": "Software Engineering",
+            "skills": [
+                "Software Development",
+                "Software Development Life Cycle",
+                "SDLC",
+                "Object-Oriented Programming",
+                "CI/CD",
+                "Git and GitHub",
+                "GitHub, GitHub Actions",
+                "Git, GitHub, GitHub Actions",
+                "Agile",
+                "SCRUM Methodology",
+                "Jira",
+                "Documentation",
+                "Software Accessibility"
+            ]
+        },
+        {
+            "name": "Artificial Intelligence & Data Science",
+            "skills": [
+                "Artificial Intelligence",
+                "LLM Evaluation",
+                "Machine Learning",
+                "Deep Learning",
+                "TensorFlow",
+                "PyTorch",
+                "NumPy",
+                "Pandas",
+                "Computer Vision",
+                "Data Mining"
+            ]
+        },
+        {
+            "name": "Operating Systems & Tools",
+            "skills": [
+                "Linux",
+                "Windows",
+                "Mac",
+                "Unix",
+                "iOS",
+                "Docker",
+                "PowerShell",
+                "Terminal Commands",
+                "Azure",
+                "Postman",
+                "MySQL",
+                "Microsoft Office",
+                "Excel",
+                "Google Sheets"
+            ]
+        },
+        {
+            "name": "Mathematics & Computer Science",
+            "skills": [
+                "Linear Algebra",
+                "Calculus",
+                "Computer Security Fundamentals"
+            ]
+        },
+        {
+            "name": "Professional Skills",
+            "skills": [
+                "Collaboration",
+                "Communication",
+                "Written Communication"
+            ]
+        }
     ],
     "schools": [
         {
@@ -1071,5 +1112,11 @@
         "My first and favorite Pokémon game is Pokemon White!",
         "In my free time, I enjoy playing Dungeons and Dragons with friends, writing, drawing, and making and playing video games!",
         "In my free time, I enjoy game development and content creation."
+    ],
+    "extra_section2_name": [
+        "bleh"
+    ],
+    "extra_section2_contents": [
+        "blah"
     ]
 }

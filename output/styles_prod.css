@@ -1,25 +1,25 @@
 /* Used to set the styles of the output file */
 
 body {
-    font-family: 'Nexa Extra Light', Calibri, Arial, sans-serif;
+    font-family: "Georgia", Calibri, Arial, sans-serif, 'Nexa Extra Light';
     background-color: rgb(255, 255, 255);
     /* margin: 30px 35px 35px 35px; */
     margin: 0;
-    font-size: 10pt;
-    font-weight: bold;
+    font-size: 9.5pt;
+    /* font-weight: bold; */
 }
 
 .section-title {
-    font-size: 12pt;
+    font-size: 11pt;
     font-weight: bold;
-    font-family: 'Nexa Heavy', 'Calibri', 'Arial', 'sans-serif';
     margin-bottom: 0px;
+    border-style: none none solid none;
+    border-width: 2px;
 }
 
 .name {
     font-size: 18pt;
     font-weight: bold;
-    font-family: 'Nexa Heavy', 'Calibri', 'Arial', 'sans-serif';
 }
 
 .section {
@@ -38,33 +38,49 @@ body {
     height: 1330px; */
     /* padding: 0px 35px 35px 35px; */
     padding: 10px 45px 0px 45px;
-    box-sizing: border-box; /* Include padding in width and height */
+    box-sizing: border-box;
+    /* Include padding in width and height */
+}
+
+.container {
+    overflow: hidden;
+    /* contains the floats */
+}
+
+.left {
+    float: left;
+}
+
+.right {
+    float: right;
 }
 
 @font-face {
     font-family: 'Nexa Heavy';
-    src: local('Nexa Heavy'); /* Use the local system's Calibri font */
-    font-weight: bold; /* Specify the font weight */
+    src: local('Nexa Heavy');
+    /* Use the local system's Calibri font */
+    font-weight: bold;
+    /* Specify the font weight */
 }
 
 a {
-    color:black;
+    color: black;
 }
 
 .logo {
-    width:100px;
+    width: 100px;
 }
 
 .logo-left {
     position: absolute;
     top: -12px;
-    left: 42px;  
+    left: 42px;
 }
 
 .logo-right {
     position: absolute;
     top: -12px;
-    right: 42px;  
+    right: 42px;
 }
 
 .logo-left img {
@@ -84,14 +100,17 @@ a {
 }
 
 .item-title {
-    color:rgb(0, 131, 161);
+    /* color: rgb(0, 131, 161); */
     margin-top: 5px;
     font-weight: bold;
-    font-family: 'Nexa Heavy', 'Calibri', 'Arial', 'sans-serif';
 }
 
-.section-title + .subsection .item-title{
-    margin-top:0px;
+.section-title+.subsection .item-title {
+    margin-top: 0px;
+}
+
+.gray {
+    color: gray;
 }
 
 * {
@@ -108,33 +127,40 @@ li {
 
 strong {
     font-weight: bold;
-    font-family: 'Nexa Heavy', 'Calibri', 'Arial', 'sans-serif';
 }
 
 .grid-table {
-    width: 100%; /* Full width */
-    border: 2px solid black; /* Bold outline */
-    border-collapse: collapse; /* Collapse borders */
+    width: 100%;
+    /* Full width */
+    border: 2px solid black;
+    /* Bold outline */
+    border-collapse: collapse;
+    /* Collapse borders */
 
-    color:rgb(0, 84, 103);
+    color: rgb(0, 84, 103);
     /* font-weight: bold; */
     /* font-family: 'Nexa Heavy', 'Calibri', 'Arial', 'sans-serif'; */
 }
 
 .grid-table td {
-    border-right: 1px solid black; /* Thin lines between columns */
-    padding: 0px 0px 0px 10px; /* Add some padding */
-    text-align: left; /* Left-align text */
-    width: 33%; /* Set equal width for each cell */
+    border-right: 1px solid black;
+    /* Thin lines between columns */
+    padding: 0px 0px 0px 10px;
+    /* Add some padding */
+    text-align: left;
+    /* Left-align text */
+    width: 33%;
+    /* Set equal width for each cell */
 }
 
 .grid-table td:last-child {
-    border-right: none; /* Remove right border from last column */
+    border-right: none;
+    /* Remove right border from last column */
 }
 
 .footnote {
-    position:absolute;
-    bottom:0;
-    color:rgba(0, 0, 0, 0.418);
+    position: absolute;
+    bottom: 0;
+    color: rgba(0, 0, 0, 0.418);
     font-size: 10px;
 }

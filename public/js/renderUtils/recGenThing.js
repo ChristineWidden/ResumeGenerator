@@ -40,6 +40,9 @@ export function recGenThing(parent, thing, numRecs, contextName = '') {
             if (key === "courses") {
                 const schoolId = thing["schoolID"] || key;
                 recGenChecklist(container, `${key}.${schoolId}`, thing[key], numRecs + 1);
+            } else if (key === "skills") {
+                const skillId = thing["name"] || key;
+                recGenChecklist(container, `${key}.${skillId}`, thing[key], numRecs + 1);
             } else if (key.startsWith("select_") && Array.isArray(thing[key])) {
                 // Keys that start with "select_" are treated as single-choice alternatives
                 // Example: select_title: ["Short Title", "Long Title"]

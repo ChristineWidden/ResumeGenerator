@@ -4,6 +4,7 @@ const bodyParser = require('body-parser');
 const path = require('path');
 const { spawn } = require('child_process');
 const multer = require('multer');
+const { buildSelectedSkills } = require('./resumeDataBuilder');
 const upload = multer();
 
 const app = express();
@@ -28,6 +29,7 @@ app.post('/generate-json', upload.none(), async (req, res) => {
         const masterlistData = JSON.parse(await fs.readFile(MASTERLIST_PATH, { encoding: 'utf8' }));
         const resumeData = {}
         const schoolCourseDict = {}
+        const skillDict = {}
         const selectOptionsDict = {} // Track selected indices for select_* fields
 
         // Parse form input into structured JSON
@@ -64,6 +66,15 @@ app.post('/generate-json', upload.none(), async (req, res) => {
                 const degree = parts[1]
                 if (!schoolCourseDict[degree]) schoolCourseDict[degree] = [];
                 schoolCourseDict[degree].push(index)
+                console.log(schoolCourseDict)
+                continue
+            } 
+            // skills have nested checkboxes so need special treatment
+            if (topCategory === 'skills') {
+                const name = parts[1]
+                if (!skillDict[name]) skillDict[name] = [];
+                skillDict[name].push(index)
+                console.log(skillDict)
                 continue
             } 
 
@@ -146,6 +157,10 @@ app.post('/generate-json', upload.none(), async (req, res) => {
                 }
             });
         }
+        
+        
+        // Build the selected skills grouped by category
+        resumeData["skills"] = buildSelectedSkills(skillDict, masterlistData);
 
         // Ensure output directory exists
         if (!(await exists(OUTPUT_DIR))) {
@@ -154,6 +169,7 @@ app.post('/generate-json', upload.none(), async (req, res) => {
         }
 
         // Write output JSON
+        console.log(resumeData)
         await fs.writeFile(OUTPUT_FILE, JSON.stringify(resumeData, null, 2));
         console.log(`Wrote resume JSON to ${OUTPUT_FILE}`);
 

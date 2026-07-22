@@ -49,11 +49,14 @@
     ],
     "extra_section_name": "x",
     "extra_section_contents": "x",
+    "extra_section2_name": "x",
+    "extra_section2_contents": "x",
     "section_order": [
         "projects",
         "skills",
         "experience",
         "education",
-        "extra"
+        "extra",
+        "extra2"
     ]
 }
